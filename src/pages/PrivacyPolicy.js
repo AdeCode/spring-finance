@@ -6,7 +6,7 @@ function PrivacyPolicy() {
         <Wrapper className='lg:px-12 py-12'>
             <div className='bg-white p-5 rounded-lg'>
                 <div className="title">
-                    2. Privacy Policy
+                    Privacy Policy
                 </div>
                 <p>
                     <span className='block font-normal'>2.1</span>

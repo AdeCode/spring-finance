@@ -7,10 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function WaitlistForm() {
     const [formData, setFormData] = useState({
         email:'',
-        country: '',
         user_type: ''
     })
-    const [countries, setCountries] = useState([])
 
     const handleInputChange = event => {
         const { name, value } = event.target;
@@ -22,7 +20,7 @@ function WaitlistForm() {
         fetch('https://restcountries.com/v3.1/all')
             .then(res => { return res.json() })
             .then(data => {
-                setCountries(data)
+                console.log(data)
             })
             .catch(err => { console.log(err) })
     }, [])
@@ -46,7 +44,7 @@ function WaitlistForm() {
 
 
                 fetch('https://frkrvith3d.execute-api.us-east-1.amazonaws.com/api/waitlist', {
-                    method: 'PUT',
+                    method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
@@ -64,8 +62,6 @@ function WaitlistForm() {
         })
     }
 
-    
-
     return (
         <Wrapper>
             <div class="form">
@@ -81,7 +77,7 @@ function WaitlistForm() {
                         onChange={handleInputChange}
                     />
                 </div>
-                <div class="form-group flex flex-col mb-6">
+                {/* <div class="form-group flex flex-col mb-6">
                     <label for="country" class="text-xl text-label_text mb-[5px]">Country*</label>
                     <select id="countries" 
                         required
@@ -98,7 +94,7 @@ function WaitlistForm() {
                             })
                         }
                     </select>
-                </div>
+                </div> */}
                 <div class="form-group flex flex-col mb-6">
                     <label for="coutry" class="text-xl text-label_text mb-[5px]"> Please associate yourself as a/an
                         ...</label>
@@ -147,4 +143,7 @@ export default WaitlistForm
 
 const Wrapper = styled.div`
 
+    input, select{
+        background: linear-gradient(128.03deg, rgba(97, 153, 219, 0.1) -0.78%, rgba(75, 202, 105, 0.1) 90.56%);
+    }
 `

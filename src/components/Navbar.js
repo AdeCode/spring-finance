@@ -6,13 +6,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from './Modal';
 import WaitlistForm from './WaitlistForm';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
+import close from '../images/close.png'
 
 function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false)
 
     const [modal, setModal] = useState(false)
-    
+
     const closeModal = () => {
         setModal(false)
         console.log(modal)
@@ -41,29 +43,40 @@ function Navbar() {
 
     return (
         <Nav>
-            {modal && 
-            <Modal
-                title='Join our waitlist'
-                closeModal={()=>closeModal()}
-            >
-                <WaitlistForm/>
-            </Modal>
-        }
-            <nav className='flex py-5 px-7 justify-between lg:gap-5 lg:h-[80px] items-center' id='top'>
-                <div className="left lg:w-[70%] flex items-center lg:h-[100%]">
-                    <div className='w-full lg:flex lg:justify-between lg:h-[100%] lg:items-center'>
-                        <div className="logo lg:w-[30%]">
-                            <Link to='./'>
-                                <img src={logo} alt='Spring Finance Logo'/>    
-                            </Link>
-                        </div>
-                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:w-[70%] lg:justify-between lg:items-center lg:h-[100%]`}>
-                            <h2 className='flex justify-end lg:hidden mb-4' onClick={() => setMobileMenu(false)}>X</h2>
-                            <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
+            {modal &&
+                <Modal
+                    title='Join our waitlist'
+                    subTitle='With Spring, local businesses can get paid instantly,  everyone else can receive/send funds to each other & across continents with no delay.'
+                    closeModal={() => closeModal()}
+                >
+                    <WaitlistForm />
+                </Modal>
+            }
+            <nav className='flex py-5 px-7  justify-between lg:gap-5 lg:h-[80px] items-center' id='top'>
+                <div className='flex justify-between items-center w-full lg:px-[200px]'>
+                    <div className='logo w-[90px] lg:w-[120px]'>
+                        <Link to='./'>
+                            <img src={logo} alt='Spring Finance Logo' />
+                        </Link>
+                    </div>
+                    <div className='nav-menu'>
+                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-9 lg:items-center lg:h-[100%]`}>
+                            <div className='flex justify-end lg:hidden my-4' onClick={() => setMobileMenu(false)}>
+                                <img src={close} alt='close'/>
+                            </div>
+                            <li className='lg:flex lg:items-center gap-[3px] lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 Products
+                                <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
+                                <MdOutlineKeyboardArrowDown />
+                                <div className='dropdown-menu hidden absolute z-[1] group-hover:block bg-white lg:flex-col min-w-[100px] h-fit top-14'>
+                                    <Link to=''>P2P Payment</Link>
+                                    <Link to=''>SMEs Payments</Link>
+                                    <Link to=''>Cross-border Tuition Payments</Link>
+                                </div>
                             </li>
-                            <li className='font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
-                                Industries
+                            <li className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
+                                <div>Industries</div>
+                                <MdOutlineKeyboardArrowDown />
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 About
@@ -75,17 +88,19 @@ function Navbar() {
                                 <div onClick={openModal} className='mobile-btn cursor-pointer'>Join our waitlist</div>
                                 <span className='mobile-btn reg cursor-pointer'>Register Now</span>
                             </div>
+                            <div className='right lg:flex gap-9 hidden lg:justify-between'>
+                                <h4 onClick={openModal} className='font-semibold text-lg cursor-pointer'>Join our waitlist</h4>
+                                <div className='btn cursor-pointer' onClick={showNotice}>Register Now</div>
+                                <ToastContainer />
+                            </div>
+                            
                         </ul>
+                       
                     </div>
+                    <button className='lg:hidden flex' onClick={toggleMobileMenu}>
+                        <img src={menu} alt='menu'/>
+                    </button>
                 </div>
-                <div className='right lg:w-[30%] lg:flex hidden lg:justify-between'>
-                    <h4 onClick={openModal} className='font-semibold text-lg cursor-pointer'>Join our waitlist</h4>
-                    <div className='btn cursor-pointer' onClick={showNotice}>Register Now</div>
-                    <ToastContainer />
-                </div>
-                <button className='lg:hidden' onClick={toggleMobileMenu}>
-                    <img src={menu} alt='menu'/>
-                </button>
             </nav>
         </Nav>
     )
@@ -98,6 +113,9 @@ const Nav = styled.div`
     padding: 0;
     nav{
         
+        .new{
+            background: linear-gradient(128.03deg, rgba(97, 153, 219, 0.1) -0.78%, rgba(75, 202, 105, 0.1) 90.56%);
+        }
 
         @media (min-width: 1024px) {
             border-bottom: 1px solid #F2F4F7;
@@ -110,7 +128,7 @@ const Nav = styled.div`
                 display: flex;
                 /* justify-content: center;
                 align-items: center; */
-                padding: 16px 28px;
+                padding: 8px 20px;
                 background: linear-gradient(128.03deg, #6199DB -0.78%, #4BCA69 90.56%);
                 box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
                 border-radius: 8px;

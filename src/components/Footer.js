@@ -11,12 +11,12 @@ function FooterSection() {
                 <img src={logodark} alt='dark logo' />
                 <nav className='hidden lg:flex'>
                     <ul className='list-none flex gap-[53px] text-base leading-[17px] font-medium items-center'>
-                        <li>
+                        {/* <li>
                             <a href='./'>Product</a>
                         </li>
                         <li>
                             <a href='./'>Industries</a>
-                        </li>
+                        </li> */}
                         {/* <li>
                             <a href='./'>About</a>
                         </li>

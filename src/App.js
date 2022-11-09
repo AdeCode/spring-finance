@@ -4,10 +4,12 @@ import FooterSection from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsandConditions from './pages/TermsandConditions';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop>
       <div className="App bg-background h-auto">
         <Navbar />
         <Routes>
@@ -17,6 +19,7 @@ function App() {
         </Routes>
         <FooterSection />
       </div>
+      </ScrollToTop>
     </Router>
 
   );
