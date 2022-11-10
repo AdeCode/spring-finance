@@ -33,7 +33,7 @@ function BusinessNeeds() {
             {modal && 
                 <Modal
                     title='Free for you,'
-                    subTitle='With Spring, local businesses can get paid instantly,  everyone else can receive/send funds to each other & across continents with no delay.'
+                    subTitle='With Spring, businesses can get paid instantly from their customers, while you also stay in tune with daily customers across continents with no friction in payments.'
                     closeModal={()=>closeModal()}
                 >
                     <BusinessForm/>

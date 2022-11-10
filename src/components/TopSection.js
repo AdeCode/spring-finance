@@ -11,12 +11,10 @@ function TopSection() {
     
     const closeModal = () => {
         setModal(false)
-        console.log(modal)
     }
 
     const openModal = () => {
         setModal(true)
-        console.log(modal)
     }
 
   return (
@@ -46,7 +44,7 @@ function TopSection() {
         <div className='lg:hidden'>
             <img src={mobileBan} alt='phone'/>
         </div>
-        <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with SPRING</h4>
+        <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with <strong>SPRING</strong></h4>
         
     </Section>
   )
@@ -72,7 +70,7 @@ const Section = styled.div`
         color: #263238;
         
         .title{
-            background: linear-gradient(166.62deg, #6741FC 0.52%, #44F040 58.89%);
+            background: linear-gradient(166.62deg, #6741FC 5.52%, #258223 58.89%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -93,6 +91,5 @@ const Section = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-fill-color: transparent;
     }
 `
