@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import add from '../images/add-money.png'
 import Icon4 from '../images/Icon4.png'
@@ -18,7 +18,7 @@ import WaitlistForm from './WaitlistForm'
 
 function GlobalSection() {
     const [modal, setModal] = useState(false)
-    
+
     const closeModal = () => {
         setModal(false)
         console.log(modal)
@@ -30,13 +30,13 @@ function GlobalSection() {
     }
     return (
         <Section>
-            {modal && 
+            {modal &&
                 <Modal
-                    title='Join our waitlist'
-                    subTitle='With Spring, local businesses can get paid instantly,  everyone else can receive/send funds to each other & across continents with no delay.'
-                    closeModal={()=>closeModal()}
+                    title='Join the waitlist'
+                    subTitle='Spring is a great way to send money to friends, family and businesses, even pay your international tuition fees.'
+                    closeModal={() => closeModal()}
                 >
-                    <WaitlistForm/>
+                    <WaitlistForm />
                 </Modal>
             }
             <div className='top flex flex-col-reverse lg:flex-row lg:justify-between lg:px-[200px]'>
@@ -69,14 +69,14 @@ function GlobalSection() {
             </div>
             <div className='bottom hidden w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
                 <div>
-                    <img src={lft} alt='icon'  />
+                    <img src={lft} alt='icon' />
                 </div>
                 <div className='lg:w-[650px] flex flex-col items-center'>
                     <div className='text-white tracking-tight font-medium lg:text-[30px]'>
                         <h2 className='text-center leading-9'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
                         <p className='text-center pt-3'>No stress, or expensive fees.</p>
                     </div>
-                    <div onClick={openModal} className='text-blue-bg text-lg bg-white py-3 px-9 w-fit mt-[16px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div>
+                    {/* <div onClick={openModal} className='text-blue-bg text-lg bg-white py-3 px-9 w-fit mt-[16px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div> */}
                 </div>
                 <div>
                     <img src={rtt} alt='icon' />
@@ -84,7 +84,7 @@ function GlobalSection() {
             </div>
             <div className='lg:hidden w-full bg-blue-bg relative flex justify-center'>
                 <img src={mobile} alt='send money' width='100%' height='100%' />
-                <div className='absolute top-6 flex flex-col items-center'>        
+                <div className='absolute top-6 flex flex-col items-center'>
                     <h2 className='text-white w-[165px] tracking-tight font-semibold text-center text-xs'>Start sending money to friends, family and also businesses with Spring today with no fuss.</h2>
                     <p className='text-center text-white font-medium text-xs pt-1'>No stress, or expensive fees.</p>
                     <div onClick={openModal} className='bg-white text-blue-bg text-xs font-semibold py-1 px-1 w-fit rounded-sm text-center mt-[6px]'>Join our waitlist</div>

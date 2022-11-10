@@ -40,8 +40,8 @@ function BusinessNeeds() {
         <Section className='px-8 py-10 lg:py-0 lg:px-[200px]'>
             {modal &&
                 <Modal
-                    title='Join our waitlist'
-                    subTitle='With Spring, local businesses can get paid instantly,  everyone else can receive/send funds to each other & across continents with no delay.'
+                    title='Join the waitlist'
+                    subTitle='Spring is a great way to send money to friends, family and businesses, even pay your international tuition fees.'
                     closeModal={() => closeModal()}
                 >
                     <WaitlistForm />
@@ -50,7 +50,7 @@ function BusinessNeeds() {
             {businessModal &&
                 <Modal
                     title='Free for you,'
-                    subTitle='Spring is a great way to send money to friends, family and businesses, even pay your international tuition fees.'
+                    subTitle='With Spring, businesses can get paid instantly from their customers, while you also stay in tune with daily customers across continents with no friction in payments.'
                     closeModal={() => closeBusinessModal()}
                 >
                     <BusinessForm />
