@@ -5,7 +5,7 @@ import styled from 'styled-components'
 function Modal({ title, subTitle, closeModal, children}) {
     return (
         <ModalContainer className='pt-16 lg:py-[60px]'>
-            <div className='modal flex w-full px-8 lg:w-[40%] z-10 bg-background h-fit lg:h-fit flex-col items-center lg:px-[20px] py-[20px]'>
+            <div className='modal flex w-full px-8 lg:w-[40%] fixed z-10 bg-background h-fit lg:h-fit flex-col items-center lg:px-[20px] py-[20px]'>
                 <div className='flex justify-end w-full'>
                     <button className='flex font-bold py-1' onClick={closeModal}>X</button>
                 </div>
