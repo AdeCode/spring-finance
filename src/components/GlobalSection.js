@@ -71,7 +71,7 @@ function GlobalSection() {
                 <div>
                     <img src={lft} alt='icon' />
                 </div>
-                <div className='lg:w-[650px] flex flex-col items-center'>
+                <div className='lg:w-[940 flex flex-col items-center'>
                     <div className='text-white tracking-tight font-medium lg:text-[30px]'>
                         <h2 className='text-center leading-9'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
                         <p className='text-center pt-3'>No stress, or expensive fees.</p>
