@@ -44,12 +44,12 @@ function WaitlistForm() {
                     "ip_address": json.IPv4,
                     "city": json.city,
                     "state": json.state,
-                    "country": formData.country,
+                    "country": json.country_name,
                     "latitude": json.latitude,
                     "longitude": json.longitude,
                     "form": 1
                 };
-
+                console.log(bodyParams)
 
                 fetch('https://frkrvith3d.execute-api.us-east-1.amazonaws.com/api/waitlist', {
                     method: 'POST',
