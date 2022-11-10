@@ -37,7 +37,7 @@ function GlobalSection() {
                 </Modal>
             }
             <div className='top flex flex-col-reverse lg:flex-row lg:justify-between lg:px-[200px]'>
-                <div className='px-[66px] lg:pt-4 lg:pl-[200px]'>
+                <div className='px-[66px] lg:pt-8 lg:pl-[200px]'>
                     <img src={add} alt='add money' />
                 </div>
                 <div className='right flex flex-col items-center font-medium lg:ml-[56px] lg:pt-14 lg:pr-[63px] lg:items-start'>
