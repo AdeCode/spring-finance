@@ -9,6 +9,7 @@ import WaitlistForm from './WaitlistForm';
 import { Link } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import close from '../images/close.png'
+import './Navbar.css'
 
 function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -64,19 +65,38 @@ function Navbar() {
                             <div className='flex justify-end lg:hidden my-4' onClick={() => setMobileMenu(false)}>
                                 <img src={close} alt='close'/>
                             </div>
-                            <li className='lg:flex lg:items-center gap-[3px] lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
-                                Products
-                                <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
-                                <MdOutlineKeyboardArrowDown />
-                                <div className='dropdown-menu hidden absolute z-[1] group-hover:block bg-white lg:flex-col min-w-[100px] h-fit top-14'>
-                                    <Link to=''>P2P Payment</Link>
-                                    <Link to=''>SMEs Payments</Link>
-                                    <Link to=''>Cross-border Tuition Payments</Link>
-                                </div>
+                            <li className=''>
+                                <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 lg:p-0 leading-[20px]'>
+                                    Products
+                                    <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
+                                    <MdOutlineKeyboardArrowDown />
+                                </span>
+                                
+                                <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
+                                    <li className='lg:text-sm'>P2P Payment</li>
+                                    <li className='lg:text-sm'>SMEs Payments</li>
+                                    <li className='lg:text-sm'>Cross-border Tuition Payments</li>
+                                    <li className='lg:text-sm'>BaaS</li>
+                                    <li className='lg:text-sm'>Global Payout/Payins</li>
+                                    <li className='lg:text-sm'>Cross-border  Wallets & Cards</li>
+                                    <li className='lg:text-sm'>Domestic & Foreign Accounts</li>
+                                    <li className='lg:text-sm'>API</li>
+                                </ul>
                             </li>
                             <li className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
-                                <div>Industries</div>
-                                <MdOutlineKeyboardArrowDown />
+                                <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 pb-[24.6px] lg:p-0 leading-[20px]'>
+                                    Industries
+                                    <MdOutlineKeyboardArrowDown />
+                                </span>
+                                <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
+                                    <li className='lg:text-sm'>Education
+                                        <ul className='sub-menu1 bg-white'>
+                                            <li>International  Institutions</li>
+                                            <li>International  Students  (Coming soon)</li>
+                                        </ul>
+                                    </li>
+                                    <li className='lg:text-sm'>B2B</li>
+                                </ul>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 About

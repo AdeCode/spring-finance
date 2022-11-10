@@ -81,9 +81,10 @@ function GlobalSection() {
             </div>
             <div className='lg:hidden w-full bg-blue-bg relative flex justify-center'>
                 <img src={mobile} alt='send money' width='100%' height='100%' />
-                <div className='absolute top-6 flex flex-col items-center'>
+                <div className='absolute top-6 flex flex-col items-center'>        
                     <h2 className='text-white w-[165px] tracking-tight font-semibold text-center text-xs'>Start sending money to friends, family and also businesses with Spring today with no fuss.</h2>
-                    <div className='bg-white text-blue-bg text-xs font-semibold py-1 px-1 w-fit rounded-sm text-center mt-[6px]'>Join our waitlist</div>
+                    <p className='text-center text-white font-medium text-xs pt-1'>No stress, or expensive fees.</p>
+                    <div onClick={openModal} className='bg-white text-blue-bg text-xs font-semibold py-1 px-1 w-fit rounded-sm text-center mt-[6px]'>Join our waitlist</div>
                 </div>
             </div>
         </Section>
