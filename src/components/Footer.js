@@ -112,7 +112,7 @@ function FooterSection() {
                 <Link to='/privacy-policy' className='hidden lg:flex font-medium text-base leading-[19px]'>Privacy policy</Link>
 
                 <div className='hidden lg:flex lg:m-0'>
-                    <ul className='socials list-none flex gap-[14px] lg:gap-[29px] items-center'>
+                    <ul className='socials list-none flex gap-[14px] lg:gap-[29px] items-center pr-11'>
                         <li>
                             <a href='https://web.facebook.com/springfinance/' target='_blank' rel='noreferrer'>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -144,7 +144,7 @@ function FooterSection() {
                                 </svg>
                             </a>
                         </li>
-                        {/* <li>
+                        <li className='hidden'>
                             <a href='instagram.com'>
                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_4395_48283)">
@@ -159,9 +159,10 @@ function FooterSection() {
                                     </defs>
                                 </svg>
                             </a>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
+
 
             </div>
         </Footer>
