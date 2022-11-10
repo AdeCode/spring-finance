@@ -6,6 +6,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from './Modal';
 import WaitlistForm from './WaitlistForm';
+import BusinessForm from './BusinessForm';
 import { Link } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import close from '../images/close.png'
@@ -16,6 +17,18 @@ function Navbar() {
 
     const [modal, setModal] = useState(false)
 
+    const [businessModal, setBusinessModal] = useState(false)
+
+    const closeBusinessModal = () => {
+        setBusinessModal(false)
+    }
+
+    const openBusinessModal = () => {
+        closeMenu()
+        setBusinessModal(true)
+    }
+
+
     const closeModal = () => {
         setModal(false)
         console.log(modal)
@@ -25,10 +38,6 @@ function Navbar() {
         closeMenu()
         setModal(true)
     }
-
-    const showNotice = () => {
-        toast("Coming soon...")
-    };
 
     const closeMenu = () => {
         setMobileMenu(false)
@@ -53,6 +62,15 @@ function Navbar() {
                     <WaitlistForm />
                 </Modal>
             }
+            {businessModal &&
+                <Modal
+                    title='Free for you,'
+                    subTitle='Spring is a great way to send money to friends, family and businesses, even pay your international tuition fees.'
+                    closeModal={() => closeBusinessModal()}
+                >
+                    <BusinessForm />
+                </Modal>
+            }
             <nav className='flex py-5 px-7  justify-between lg:gap-5 lg:h-[80px] items-center' id='top'>
                 <div className='flex justify-between items-center w-full lg:px-[200px]'>
                     <div className='logo w-[90px] lg:w-[120px]'>
@@ -63,7 +81,7 @@ function Navbar() {
                     <div className='nav-menu'>
                         <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-9 lg:items-center lg:h-[100%]`}>
                             <div className='flex justify-end lg:hidden my-4' onClick={() => setMobileMenu(false)}>
-                                <img src={close} alt='close'/>
+                                <img src={close} alt='close' />
                             </div>
                             <li className=''>
                                 <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 lg:p-0 leading-[20px]'>
@@ -71,7 +89,7 @@ function Navbar() {
                                     <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
                                     <MdOutlineKeyboardArrowDown />
                                 </span>
-                                
+
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
                                     <li className='lg:text-sm'>P2P Payment</li>
                                     <li className='lg:text-sm'>SMEs Payments</li>
@@ -106,19 +124,19 @@ function Navbar() {
                             </li> */}
                             <div className='flex flex-col lg:w-[30%] lg:hidden'>
                                 <div onClick={openModal} className='mobile-btn cursor-pointer'>Join our waitlist</div>
-                                <span className='mobile-btn reg cursor-pointer'>Register Now</span>
+                                <span onClick={openModal} className='mobile-btn reg cursor-pointer'>Register Now</span>
                             </div>
                             <div className='right lg:flex gap-9 hidden lg:justify-between'>
                                 <h4 onClick={openModal} className='font-semibold text-lg cursor-pointer'>Join our waitlist</h4>
-                                <div className='btn cursor-pointer' onClick={showNotice}>Register Now</div>
+                                <div className='btn cursor-pointer' onClick={openBusinessModal}>Register Now</div>
                                 <ToastContainer />
                             </div>
-                            
+
                         </ul>
-                       
+
                     </div>
                     <button className='lg:hidden flex' onClick={toggleMobileMenu}>
-                        <img src={menu} alt='menu'/>
+                        <img src={menu} alt='menu' />
                     </button>
                 </div>
             </nav>

@@ -7,6 +7,9 @@ import Icon33 from '../images/Icon33.png'
 import Icon1 from '../images/Icon1.png'
 import leftC from '../images/leftC.png'
 import lefti from '../images/lefti.png'
+import lft from '../images/lft.png'
+import rht from '../images/rht.png'
+import rtt from '../images/rtt.png'
 import rightC from '../images/rightC.png'
 import mobile from '../images/mobile_send.png'
 import { Link } from 'react-router-dom'
@@ -64,19 +67,19 @@ function GlobalSection() {
                     </div>
                 </div>
             </div>
-            <div className='bottom hidden lg:h-auto w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
+            <div className='bottom hidden w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
                 <div>
-                    <img src={lefti} alt='icon' />
+                    <img src={lft} alt='icon'  />
                 </div>
                 <div className='lg:w-[650px] flex flex-col items-center'>
                     <div className='text-white tracking-tight font-medium lg:text-[30px]'>
-                        <h2 className='text-center'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
-                        <p className='text-center'>No stress, or expensive fees.</p>
+                        <h2 className='text-center leading-9'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
+                        <p className='text-center pt-3'>No stress, or expensive fees.</p>
                     </div>
-                    <div onClick={openModal} className='text-blue-bg text-lg bg-white py-4 px-9 w-fit mt-[26px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div>
+                    <div onClick={openModal} className='text-blue-bg text-lg bg-white py-3 px-9 w-fit mt-[16px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div>
                 </div>
                 <div>
-                    <img src={rightC} alt='icon' />
+                    <img src={rtt} alt='icon' />
                 </div>
             </div>
             <div className='lg:hidden w-full bg-blue-bg relative flex justify-center'>

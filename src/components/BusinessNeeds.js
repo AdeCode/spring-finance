@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import local from '../images/local.png'
-import family from '../images/family.png'
-import tuition from '../images/tuition.png'
 import pay from '../images/g-pay.png'
 import friend from '../images/friend-desk.png'
 import fam from '../images/fam-desk.png'
@@ -14,9 +11,20 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from './Modal'
 import BusinessForm from './BusinessForm'
+import WaitlistForm from './WaitlistForm'
 
 function BusinessNeeds() {
     const [modal, setModal] = useState(false)
+
+    const [businessModal, setBusinessModal] = useState(false)
+
+    const closeBusinessModal = () => {
+        setBusinessModal(false)
+    }
+
+    const openBusinessModal = () => {
+        setBusinessModal(true)
+    }
 
     const closeModal = () => {
         setModal(false)
@@ -32,9 +40,18 @@ function BusinessNeeds() {
         <Section className='px-8 py-10 lg:py-0 lg:px-[200px]'>
             {modal &&
                 <Modal
-                    title='Free for you,'
-                    subTitle='With Spring, businesses can get paid instantly from their customers, while you also stay in tune with daily customers across continents with no friction in payments.'
+                    title='Join our waitlist'
+                    subTitle='With Spring, local businesses can get paid instantly,  everyone else can receive/send funds to each other & across continents with no delay.'
                     closeModal={() => closeModal()}
+                >
+                    <WaitlistForm />
+                </Modal>
+            }
+            {businessModal &&
+                <Modal
+                    title='Free for you,'
+                    subTitle='Spring is a great way to send money to friends, family and businesses, even pay your international tuition fees.'
+                    closeModal={() => closeBusinessModal()}
                 >
                     <BusinessForm />
                 </Modal>
@@ -46,7 +63,7 @@ function BusinessNeeds() {
                             <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing</h2>
                         </div>
                         <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Irrespective of where your business is located, you should be discovered and able to collect payments from your customers either as a one-off, automated or recurring payments golbally without frustration. </p>
-                        <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
+                        <div onClick={openBusinessModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
                             Register Now
                         </div>
                     </div>

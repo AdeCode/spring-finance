@@ -37,13 +37,14 @@ function BusinessForm() {
                 // console.log(json)
                 const bodyParams = {
                     "business_email": formData.email,
-                    // "ip_address": json.IPv4,
-                    // "city": json.city,
-                    // "state": json.state,
+                    "ip_address": json.IPv4,
+                    "city": json.city,
+                    "state": json.state,
                     "business_name": formData.name,
-                    // "latitude": json.latitude,
-                    // "longitude": json.longitude,
-                    // "form": 1
+                    "country": json.country_name,
+                    "latitude": json.latitude,
+                    "longitude": json.longitude,
+                    "form": 1
                 };
                 console.log(bodyParams)
 
