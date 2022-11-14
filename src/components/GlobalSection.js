@@ -67,7 +67,14 @@ function GlobalSection() {
                     </div>
                 </div>
             </div>
-            <div className='bottom hidden w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
+            <div className='bg-purpleMB lg:bg-purpleBG bg-no-repeat h-full bg-blue-bg w-full bg-cover'>
+                <div className='font-medium text-[10px] tracking-tight lg:text-[39px] flex flex-col items-center lg:leading-[47px] py-[20px]  lg:py-[70px] lg:justify-center text-white'>
+                    <h2 className='w-[156px] lg:w-[609px] text-center'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
+                    <span className='w-[156px] lg:w-[609px] text-center lg:mt-[40px] mt-[6px]'>No stress or expensive fees.</span>
+                    <button onClick={openModal} className='text-blue-bg font-semibold text-sm lg:text-lg bg-white py-1 px-[10px] lg:py-4 lg:px-11 mt-[6px] lg:mt-10'>Join our waitlist</button>
+                </div>
+            </div>
+            {/* <div className='bottom hidden w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
                 <div>
                     <img src={lft} alt='icon' />
                 </div>
@@ -76,20 +83,20 @@ function GlobalSection() {
                         <h2 className='text-center leading-9'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
                         <p className='text-center pt-3'>No stress, or expensive fees.</p>
                     </div>
-                    {/* <div onClick={openModal} className='text-blue-bg text-lg bg-white py-3 px-9 w-fit mt-[16px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div> */}
+                    <div onClick={openModal} className='text-blue-bg text-lg bg-white py-3 px-9 w-fit mt-[16px] rounded-lg font-semibold cursor-pointer'>Join our waitlist</div>
                 </div>
                 <div>
                     <img src={rtt} alt='icon' />
                 </div>
-            </div>
-            <div className='lg:hidden w-full bg-blue-bg relative flex justify-center'>
+            </div> */}
+            {/* <div className='lg:hidden w-full bg-blue-bg relative flex justify-center'>
                 <img src={mobile} alt='send money' width='100%' height='100%' />
                 <div className='absolute top-6 flex flex-col items-center'>
                     <h2 className='text-white w-[165px] tracking-tight font-semibold text-center text-xs'>Start sending money to friends, family and also businesses with Spring today with no fuss.</h2>
                     <p className='text-center text-white font-medium text-xs pt-1'>No stress, or expensive fees.</p>
                     <div onClick={openModal} className='bg-white text-blue-bg text-xs font-semibold py-1 px-1 w-fit rounded-sm text-center mt-[6px]'>Join our waitlist</div>
                 </div>
-            </div>
+            </div> */}
         </Section>
     )
 }
