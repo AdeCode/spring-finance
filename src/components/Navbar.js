@@ -109,12 +109,17 @@ function Navbar() {
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
                                     <li className='lg:text-sm'>Education
                                         <ul className='sub-menu1 bg-white'>
-                                            <li>International  Institutions</li>
+                                            <li>
+                                                <Link to='institution'>International  Institutions</Link>
+                                            </li>
                                             <li>International  Students  (Coming soon)</li>
                                         </ul>
                                     </li>
                                     <li className='lg:text-sm'>B2B</li>
                                 </ul>
+                            </li>
+                            <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
+                                <Link to='./about'>About</Link>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 About
