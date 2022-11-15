@@ -21,6 +21,16 @@ const getInstitutions = async() => {
     }
 }
 
+const getInstitutionsByCountry = async(id) => {
+    try{
+        const {data} = await http.get(`/countries/${id}`)
+        const institutions = data.data.results
+        return institutions
+    }catch(err){
+        console.log(err)
+    }
+}
+
 // let schools = getInstitutions()
 
 // schools.then((res)=>{
@@ -58,7 +68,8 @@ const services = {
     fetchCountries,
     submitBusinessForm,
     getLocation,
-    getInstitutions
+    getInstitutions,
+    getInstitutionsByCountry,
 }
 
 export default services

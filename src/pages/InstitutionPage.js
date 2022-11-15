@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import styled from 'styled-components'
 import { ToastContainer, toast } from 'react-toastify';
 import edu from '../images/Iconedu.png'
@@ -8,6 +8,7 @@ import How from '../components/How';
 import { AiOutlineSearch } from "react-icons/ai";
 import services from '../services/FormService';
 import {validate} from '../common/index'
+import tution from '../images/institution/tution.png'
 
 
 function InstitutionPage() {
@@ -17,36 +18,44 @@ function InstitutionPage() {
         country: '',
         institution: ''
     })
-
-    const handleInputChange = event => {
+   
+    const handleInputChange = async(event) => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
-        // console.log(formData)
+        
+        if(name === 'country' && value !== ''){
+            let selectedCountry = country.filter(coun => coun.name === value)
+            filterCountries(selectedCountry[0].id)
+        }
+       
     }
 
-    useEffect(() => {
-        let institutions = services.getInstitutions()
+    const filterCountries = (id) => {
+        console.log('right here...')
+        let institutions = services.getInstitutionsByCountry(id)
         institutions.then((res) => {
             setInstitution(res)
         })
+    }
+
+    useEffect(() => {
         let countries = services.fetchCountries()
         countries.then((res) => {
             setCountry(res)
-        })
-        console.log(country)
-    }, [])
+        })       
+    }, [formData.country])
 
     const submitForm = async(e) => {
         e.preventDefault()
         console.log(formData)
         if(validate(formData.country) === false) {
-            return toast("The email field can not be empty.")
+            return toast("The country field can not be empty.")
         }
         if(validate(formData.institution) === false) {
-            return toast("The email field can not be empty.")
+            return toast("The institution field can not be empty.")
         }
         try{
-            toast("Institution found!.")
+            toast("Congratulations! your institution is listed.")
         }catch(err){
             console.log(err)
             toast("An Error Occured!")
@@ -55,8 +64,11 @@ function InstitutionPage() {
 
     return (
         <Wrapper className='bg-background relative'>
-            <div className="bg-mobileBg lg:bg-desktopBg bg-no-repeat h-fit pb-8 pt-[17px] px-[25px] bg-cover lg:w-full lg:h-[500px]">
-                <div className="w-full flex justify-end items-center h-full">
+            <div className="bg-mobileBg lg:bg-institute bg-no-repeat h-fit pb-8 lg:pb-0 pt-[17px] px-[25px] bg-cover lg:w-full lg:h-[500px]">
+                <div className="w-full flex lg:justify-between items-center h-full">
+                    <div className="hidden lg:flex items-bottom h-full">
+                        <img src={tution} alt='tuition'/>
+                    </div>
                     <div className='hidden lg:block w-[780px] text-white font-bold text-5xl text-center justify-end items-center'>
                         <h1 className=''>Students can now pay tuition fees easily with no stress. </h1>
                     </div>
@@ -94,10 +106,11 @@ function InstitutionPage() {
                                 onChange={handleInputChange}
                             >
                                 <option>Confirm institution name</option>
-                                {
+                                { institution && 
                                     institution.map(institution => {
                                         return (
-                                            <option value={institution.institution_name}>{institution.institution_name}</option>
+                                            <option className=''
+                                                key={institution.id} value={institution.institution_name}>{institution.institution_name}</option>
                                         )
                                     })
                                 }
@@ -107,7 +120,7 @@ function InstitutionPage() {
 
                         <button onClick={submitForm}
                             className="py-[6px] w-full md:px-[118px] rounded-md bg-gradient-to-t from-light_green to-dark_green text-white text-[10px]">
-                            Send
+                            Check
                         </button>
                         <ToastContainer />
                     </div>
@@ -124,17 +137,17 @@ function InstitutionPage() {
                             <select
                                 type="text"
                                 required
-                                value={formData.business_name}
+                                value={formData.country}
                                 className="form-control h-full w-[325px] border-[0.8px] focus:outline-none border-none px-2 text-placeholder"
                                 placeholder="Type country name"
-                                name='business_name'
+                                name='country'
                                 onChange={handleInputChange}
                             >
                                 <option>Select country of study</option>
                                 {
                                     country.map(country => {
                                         return (
-                                            <option value={country.name}>{country.name}</option>
+                                            <option key={country.id} value={country.name}>{country.name}</option>
                                         )
                                     })
                                 }
@@ -144,23 +157,23 @@ function InstitutionPage() {
                             <select
                                 type="text"
                                 required
-                                value={formData.business_name}
+                                value={formData.institution}
                                 className="form-control h-full w-[325px] border-[0.8px] focus:outline-none border-none px-2 text-placeholder"
                                 placeholder="Type country name"
-                                name='business_name'
+                                name='institution'
                                 onChange={handleInputChange}
                             >
                                 <option>Confirm institution name</option>
                                 {
                                     institution.map(institution => {
                                         return (
-                                            <option value={institution.institution_name}>{institution.institution_name}</option>
+                                            <option key={institution.id} value={institution.institution_name}>{institution.institution_name}</option>
                                         )
                                     })
                                 }
                             </select>
                         </div>
-                        <btn onClick={submitForm} type="submit" className="text-xl text-white py-[44px] px-28 bg-gradient-to-t from-light_green to-dark_green">Next</btn>
+                        <button onClick={submitForm} type="submit" className="text-xl text-white py-[44px] px-28 bg-gradient-to-t from-light_green to-dark_green">Next</button>
                     </form>
                 </div>
             </div>

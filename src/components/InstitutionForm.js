@@ -12,7 +12,6 @@ function InstitutionForm() {
         institution: '',
         more: 'Anything you want us to know?'
     })
-    const [institution, setInstitution] = useState([])
     const [countries, setCountries] = useState([])
     
 
@@ -21,6 +20,7 @@ function InstitutionForm() {
         try{
             const {data} = await http.get('/institutions')
             const institutions = data.data.results
+            //console.log(institutions)
             return institutions
         }catch(err){
             console.log(err)
@@ -39,11 +39,11 @@ function InstitutionForm() {
     }
 
     useEffect(() => {
-        let result = getInstitutions()
-        result.then((res) => {
-            setInstitution(res)
-        })
         getCountries()
+        // let result = getInstitutions()
+        // result.then((res) => {
+        //     setInstitution(res)
+        // })
     }, [])
     
 
@@ -84,7 +84,7 @@ function InstitutionForm() {
             <form>
 
                 <div className="form-group flex flex-col mb-6 lg:w-full">
-                    <label for="name" className="text-xl text-label_text mb-[5px]">First & Last Name</label>
+                    <label for="name" className="text-base text-label_text mb-[5px]">First & Last Name</label>
                     <input
                         type="text"
                         required
@@ -96,7 +96,7 @@ function InstitutionForm() {
                     />
                 </div>
                 <div className="form-group flex flex-col mb-6 lg:w-full">
-                    <label for="country" className="text-xl text-label_text mb-[5px]">Country*</label>
+                    <label for="country" className="text-base text-label_text mb-[5px]">Country*</label>
                     <select
                         required
                         className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
@@ -115,7 +115,7 @@ function InstitutionForm() {
                     </select>
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    <label for="institution" className="text-xl text-label_text mb-[5px]">Email address*</label>
+                    <label for="institution" className="text-base text-label_text mb-[5px]">Email address*</label>
                     <input
                         type="email"
                         required
@@ -127,8 +127,17 @@ function InstitutionForm() {
                     />
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    <label for="institution" className="text-xl text-label_text mb-[5px]">Your institution?</label>
-                    <select
+                    <label for="institution" className="text-base text-label_text mb-[5px]">Your institution?</label>
+                    <input
+                        type="text"
+                        required
+                        value={formData.institution}
+                        className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
+                        placeholder=""
+                        name='institution'
+                        onChange={handleInputChange}
+                    />
+                    {/* <select
                         required
                         value={formData.institution}
                         className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
@@ -143,7 +152,7 @@ function InstitutionForm() {
                                 )
                             })
                         }
-                    </select>
+                    </select> */}
                 </div>
                 <div className="form-group flex flex-col mb-6">
                     {/* <input
@@ -156,14 +165,14 @@ function InstitutionForm() {
                         onChange={handleInputChange}
                     /> */}
                     <textarea
-                        className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
+                        className="form-control w-full border-2 border-light_gray rounded-md px-2"
                         rows="4"
                         name='more'
                         value={formData.more}
                         onChange={handleInputChange}
                         style={{height: '100px'}}
                     >
-                    Anything you want us to know?
+                        Anything you want us to know?
                     </textarea>
                 </div>
 

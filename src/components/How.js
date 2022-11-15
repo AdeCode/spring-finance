@@ -11,7 +11,7 @@ function How() {
         <div className='lg:px-[200px] px-[25px] flex flex-col items-center justify-center'>
             <h1 className='lg:text-5xl lg:font-bold text-2xl font-Gilroy mt-[19px] mb-3 lg:mt-[77px] lg:mb-[40px]'>How it works</h1>
             <p className='lg:w-[640px] text-center text-sm lg:text-base mb-6 text-primary_text'>Pay in local currency into your virtual wallet, convert your funds to the country of study currency and you can pay directly into the education institution bank account with no other party involve in making payment for you.</p>
-            <div>
+            <div className='lg:w-[60%]'>
                 <img className='hidden lg:block' src={howDesk} alt='how it works' />
                 <img className='lg:hidden' src={how} alt='how it works' />
             </div>
@@ -30,7 +30,7 @@ function How() {
                         </div>
                         <div className='flex flex-col gap-2'>
                             <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Student Information Systems</h3>
-                            <p className='font-normal lg:text-xl text-sm lg:text-start text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
+                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
                         </div>
                     </div>
                     <div className='flex flex-col items-center lg:flex-row lg:gap-9 gap-5'>
@@ -39,7 +39,7 @@ function How() {
                         </div>
                         <div className='flex flex-col gap-2'>
                             <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Student Information Systems</h3>
-                            <p className='font-normal lg:text-xl text-sm lg:text-start text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
+                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
                         </div>
                     </div>
                     <div className='flex flex-col items-center lg:flex-row lg:gap-9 gap-5'>
@@ -48,7 +48,7 @@ function How() {
                         </div>
                         <div className='flex flex-col gap-2'>
                             <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Student Information Systems</h3>
-                            <p className='font-normal lg:text-xl text-sm lg:text-start text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
+                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
                         </div>
                     </div>
                 </div>

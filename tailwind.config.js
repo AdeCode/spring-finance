@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important: true,
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -34,6 +35,9 @@ module.exports = {
         'aboutMB' : "url('./images/about/aboutMB-banner.png')",
         'purpleBG' : "url('./images/about/purple_bg.png')",
         'purpleMB' : "url('./images/about/purpleMB.png')",
+        'institute' : "url('./images/institution/BGinstitute.png')",
+        'aboutBtmBG' : "url('./images/about/aboutBG.png')",
+
       }
     },
     fontFamily: {
