@@ -12,7 +12,6 @@ function BusinessForm() {
     const handleInputChange = event => {
         const { name, value } = event.target;
         setFormData({ ...formData, [name]: value });
-        // console.log(formData)
     }
 
     const validate = (field) => {
