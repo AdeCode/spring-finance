@@ -65,11 +65,11 @@ function InstitutionPage() {
     return (
         <Wrapper className='bg-background relative'>
             <div className="bg-mobileBg lg:bg-institute bg-no-repeat h-fit pb-8 lg:pb-0 pt-[17px] px-[25px] bg-cover lg:w-full lg:h-[500px]">
-                <div className="w-full flex lg:justify-between items-center h-full">
-                    <div className="hidden lg:flex items-bottom h-full">
-                        <img src={tution} alt='tuition'/>
+                <div className="w-full flex lg:justify-between items-center h-full lg:px-12 lg:pr-[180px]">
+                    <div className="hidden lg:flex items-end h-full">
+                        <img src={tution} alt='tuition' height='200px' width='300px'/>
                     </div>
-                    <div className='hidden lg:block w-[780px] text-white font-bold text-5xl text-center justify-end items-center'>
+                    <div className='hidden lg:block w-[580px] text-white font-bold text-4xl text-center justify-end items-center'>
                         <h1 className=''>Students can now pay tuition fees easily with no stress. </h1>
                     </div>
                 </div>
