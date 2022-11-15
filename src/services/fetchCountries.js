@@ -28,7 +28,9 @@ const fetchStates = () => {
         .catch(err => {console.log(err)})
 };
 
-export default {
+const fetchData = {
     fetchCountries,
     fetchStates
-}
+} 
+
+export default fetchData
