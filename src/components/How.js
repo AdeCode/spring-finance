@@ -38,17 +38,18 @@ function How() {
                             <img src={global} alt='Student information system'/>
                         </div>
                         <div className='flex flex-col gap-2'>
-                            <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Student Information Systems</h3>
-                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
+                            <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Global Payments & KYC Solutions</h3>
+                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>Global payment infrastructures managed through SPRING, with student’s identification before payments.</p>
                         </div>
                     </div>
+                   
                     <div className='flex flex-col items-center lg:flex-row lg:gap-9 gap-5'>
                         <div>
                             <img src={integrate} alt='Student information system'/>
                         </div>
-                        <div className='flex flex-col gap-2'>
-                            <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>Student Information Systems</h3>
-                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>The Student Information System integration will work with your existing school administrative infrastructure.</p>
+                        <div className='flex flex-col gap-2 lg:w-[700px]'>
+                            <h3 className='font-bold lg:text-2xl text-center lg:text-start text-base '>API Integrations </h3>
+                            <p className='font-normal lg:text-base text-sm lg:text-left text-center text-st_text'>API Integrations for Instalment payment plans, Notification and Refunds.</p>
                         </div>
                     </div>
                 </div>

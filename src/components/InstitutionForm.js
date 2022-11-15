@@ -72,6 +72,13 @@ function InstitutionForm() {
             const res = await http.post('/web/institutions', formData)
             toast("Form submitted succesfully.")
             console.log(res)
+            setFormData({
+                name: '',
+                country: '',
+                email: '',
+                institution: '',
+                more:''
+            })
         }catch(err){
             console.log(err)
             toast("An Error Occured!")

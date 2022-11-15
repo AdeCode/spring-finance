@@ -118,7 +118,7 @@ function Navbar() {
                                     <li className='lg:text-sm'>B2B</li>
                                 </ul>
                             </li>
-                            <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
+                            <li className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 <Link to='./about'>About</Link>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
