@@ -7,7 +7,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Modal from './Modal';
 import WaitlistForm from './WaitlistForm';
 import BusinessForm from './BusinessForm';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import close from '../images/close.png'
 import './Navbar.css'
@@ -50,6 +50,10 @@ function Navbar() {
         setActive(!active)
         console.log(mobileMenu)
     }
+
+    const style = ({ isActive }) => ({
+        color: isActive ? '#4BCA69' : '#263238',
+    });
 
     return (
         <Nav>
@@ -110,16 +114,18 @@ function Navbar() {
                                     <li className='lg:text-sm'>Education
                                         <ul className='sub-menu1 bg-white'>
                                             <li>
-                                                <Link to='institution'>International  Institutions</Link>
+                                                <NavLink to='institution'>International  Institutions</NavLink>
                                             </li>
-                                            <li>International  Students  (Coming soon)</li>
+                                            <li>
+                                                <NavLink>International  Students  (Coming soon)</NavLink>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li className='lg:text-sm'>B2B</li>
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
-                                <Link to='./about'>About</Link>
+                                <NavLink to='./about' style={style}>About</NavLink>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 About
@@ -132,7 +138,9 @@ function Navbar() {
                                 <span onClick={openModal} className='mobile-btn reg cursor-pointer'>Register Now</span>
                             </div>
                             <div className='right lg:flex gap-9 hidden lg:justify-between'>
-                                <h4 onClick={openModal} className='font-semibold text-lg cursor-pointer'>Join our waitlist</h4>
+                                <h4 onClick={openModal} className='font-semibold text-lg cursor-pointer'>
+                                    <NavLink to='./' style={style}>Join our waitlist</NavLink>
+                                </h4>
                                 <div className='btn cursor-pointer' onClick={openBusinessModal}>Register Now</div>
                                 <ToastContainer />
                             </div>
