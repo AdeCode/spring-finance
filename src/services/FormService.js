@@ -1,14 +1,8 @@
 import http from "../shared/http";
 import axios from "axios";
 
-const fetchCountries = async() => {
-    try{
-        const {data} = await http.get('/countries')
-        const institutions = data.data.results
-        return institutions
-    }catch(err){
-        console.log(err)
-    }
+const fetchCountries = () => {
+    return http.get('/countries')
 }
 
 const getInstitutions = async() => {
@@ -24,30 +18,18 @@ const getInstitutions = async() => {
 const getInstitutionsByCountry = async(id) => {
     try{
         const {data} = await http.get(`/countries/${id}`)
-        const institutions = data.data.results
-        return institutions
+        return data.data.results
     }catch(err){
         console.log(err)
     }
 }
 
-// let schools = getInstitutions()
-
-// schools.then((res)=>{
-//     console.log(res)
-// })
-
 const submitBusinessForm = async() => {
-    //console.log(getLocation());
-    //console.log(formData)
-    multiply.then((result)=>{
-        //console.log(result)
-    })
+   console.log('submit business')
+}
 
-    
-    // let data = await multiply(2,4)
-    // console.log(data)
-
+const submitInstitutionForm = async(payload) => {
+    return http.post('/web/institutions', payload)
 }
 
 const getLocation = async () => {
@@ -59,10 +41,6 @@ const getLocation = async () => {
     }
 }
 
-const multiply = async(a,b) => {
-    let result = await a*b
-    return result
-}
 
 const services = {
     fetchCountries,
@@ -70,6 +48,7 @@ const services = {
     getLocation,
     getInstitutions,
     getInstitutionsByCountry,
+    submitInstitutionForm,
 }
 
 export default services

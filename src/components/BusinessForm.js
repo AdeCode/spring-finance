@@ -2,12 +2,14 @@ import React, { useState } from 'react'
 import styled from 'styled-components'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import services from '../services/FormService';
 
 function BusinessForm() {
     const [formData, setFormData] = useState({
         email: '',
         name: ''
     })
+    const {submitBusinessForm, getLocation} = services
 
     const handleInputChange = event => {
         const { name, value } = event.target;
@@ -71,7 +73,7 @@ function BusinessForm() {
         <Wrapper>
             <div className="form">
                 <div className="form-group flex flex-col mb-6 lg:w-full">
-                    <label for="email" className="text-xl text-label_text mb-[5px]">Name of Business</label>
+                    <label htmlFOr="email" className="text-xl text-label_text mb-[5px]">Name of Business</label>
                     <input
                         type="text"
                         required
@@ -83,7 +85,7 @@ function BusinessForm() {
                     />
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    <label for="email" className="text-xl text-label_text mb-[5px]">Business email address*</label>
+                    <label htmlFor="email" className="text-xl text-label_text mb-[5px]">Business email address*</label>
                     <input
                         type="email"
                         required
