@@ -130,7 +130,7 @@ function InstitutionPage() {
 
             </div>
             <div className="hidden lg:flex justify-center w-full mb-[7%]">
-                <div className="w-[1000px] h-[107px] bg-white absolute top-[19.5%]">
+                <div className="w-[1000px] h-[107px] bg-white absolute top-[19.5%] rounded-lg">
                     <form className='flex h-full'>
                         <div className="form-group flex items-center pl-[40px] gap-8">
                             <AiOutlineSearch style={{ color: "#8C97AC" }} />
@@ -173,7 +173,10 @@ function InstitutionPage() {
                                 }
                             </select>
                         </div>
-                        <button onClick={submitForm} type="submit" className="text-xl text-white py-[44px] px-28 bg-gradient-to-t from-light_green to-dark_green">Next</button>
+                        <button onClick={submitForm} type="submit" 
+                            className="text-xl rounded-r-lg rounded-l-none text-white py-[44px] px-28 bg-gradient-to-t from-light_green to-dark_green rounded">
+                            Check
+                        </button>
                     </form>
                 </div>
             </div>
