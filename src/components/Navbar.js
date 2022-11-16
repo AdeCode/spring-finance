@@ -79,11 +79,11 @@ function Navbar() {
                         </Link>
                     </div>
                     <div className='nav-menu'>
-                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-9 lg:items-center lg:h-[100%]`}>
+                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-9 lg:items-center lg:h-[100%] z-10`}>
                             <div className='flex justify-end lg:hidden my-4' onClick={() => setMobileMenu(false)}>
                                 <img src={close} alt='close' />
                             </div>
-                            <li className=''>
+                            <li className='' onClick={closeMenu}>
                                 <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 lg:p-0 leading-[20px]'>
                                     Products
                                     <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
@@ -101,7 +101,7 @@ function Navbar() {
                                     <li className='lg:text-sm'>API</li>
                                 </ul>
                             </li>
-                            <li className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
+                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 pb-[24.6px] lg:p-0 leading-[20px]'>
                                     Industries
                                     <MdOutlineKeyboardArrowDown />
@@ -118,7 +118,7 @@ function Navbar() {
                                     <li className='lg:text-sm'>B2B</li>
                                 </ul>
                             </li>
-                            <li className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
+                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 <Link to='./about'>About</Link>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>

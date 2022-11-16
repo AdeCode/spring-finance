@@ -82,7 +82,7 @@ function InstitutionPage() {
                                 type="text"
                                 required
                                 value={formData.country}
-                                className="form-control h-[45px] w-full border-[0.8px] border-light_gray rounded-md px-2 text-label_text"
+                                className="form-control h-[45px] w-full border-[0.8px] border-light_gray rounded-md px-2 text-label_text text-[11px]"
                                 name='country'
                                 onChange={handleInputChange}
                             >
@@ -101,7 +101,7 @@ function InstitutionPage() {
                             <select
                                 required
                                 value={formData.institution}
-                                className="form-control h-[45px] w-full border-[0.8px] border-light_gray rounded-md px-2 text-label_text"
+                                className="form-control h-[45px] w-full border-[0.8px] border-light_gray rounded-md px-2 text-label_text text-[11px]"
                                 name='institution'
                                 onChange={handleInputChange}
                             >
@@ -182,21 +182,21 @@ function InstitutionPage() {
                     <div>
                         <img src={edu} alt='icon' />
                     </div>
-                    <h2 className='w-[237px] text-base font-medium text-center lg:text-start'>Pay into any education institutions around the world</h2>
+                    <h2 className='w-[237px] text-base font-normal text-center lg:text-start'>Pay for your tuition fees anywhere around the world</h2>
                 </div>
                 <hr className='divider hidden lg:block'></hr>
                 <div className='flex flex-col lg:flex-row gap-[4px] lg:gap-6 items-center'>
                     <div>
                         <img src={wallet} alt='icon' />
                     </div>
-                    <h2 className='w-[295px] text-base font-medium text-center lg:text-start'>Easy payment options you know and trust: online payments (credit/debit card), direct bank transfer.</h2>
+                    <h2 className='w-[295px] text-base font-normal text-center lg:text-start'>Easy payment options you know and trust: online payments (credit/debit card), direct bank transfer.</h2>
                 </div>
                 <hr className='divider hidden lg:block'></hr>
                 <div className='flex flex-col lg:flex-row gap-[4px] lg:gap-6 items-center'>
                     <div>
                         <img src={cash} alt='icon' />
                     </div>
-                    <h2 className='w-[237px] text-base font-medium text-center lg:text-start'>Pay directly from your Spring App</h2>
+                    <h2 className='w-[237px] text-base font-normal text-center lg:text-start'>Pay directly from your Spring App</h2>
                 </div>
             </div>
             <How />
