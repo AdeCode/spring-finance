@@ -19,7 +19,7 @@ function How() {
                 <h2 className='font-bold text-2xl lg:text-4xl text-center lg:w-[1200px] mb-[7px] lg:mb-[15px]'>
                     We are open to work with various institutions around the world, while they benefit from the services we offer?
                 </h2>
-                <p className='font-normal text-center text-sm lg:text-2xl text-how_p'>We are always ready to answer your questions, inquires, and more.</p>
+                <p className='font-normal text-center text-sm lg:text-2xl text-how_p'>We are always ready to answer your questions, inquiries, and more.</p>
             </div>
 
             <div className='flex flex-col lg:flex-row lg:justify-between lg:gap-36 lg:mt-14 mt-8 lg:h-[fill] lg:items-center lg:pb-9'>
