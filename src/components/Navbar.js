@@ -98,10 +98,10 @@ function Navbar() {
                                     <li className='lg:text-sm'>P2P Payment</li>
                                     <li className='lg:text-sm'>SMEs Payments</li>
                                     <li className='lg:text-sm'>Cross-border Tuition Payments</li>
-                                    <li className='lg:text-sm'>BaaS</li>
+                                    <li className='lg:text-sm'>BaaS (Banking as a Service)</li>
                                     <li className='lg:text-sm'>Global Payout/Payins</li>
-                                    <li className='lg:text-sm'>Cross-border  Wallets & Cards</li>
-                                    <li className='lg:text-sm'>Domestic & Foreign Accounts</li>
+                                    <li className='lg:text-sm'>Cross-border Virtual Wallets & Cards</li>
+                                    <li className='lg:text-sm'>Domestic & Foreign Virtual Accounts</li>
                                     <li className='lg:text-sm'>API</li>
                                 </ul>
                             </li>
@@ -112,16 +112,22 @@ function Navbar() {
                                 </span>
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
                                     <li className='lg:text-sm'>Education
-                                        <ul className='sub-menu1 bg-white'>
+                                        <ul className='sub-menu1 bg-white lg:min-w-[250px]'>
                                             <li>
                                                 <NavLink to='institution'>International  Institutions</NavLink>
                                             </li>
                                             <li>
-                                                <NavLink>International  Students  (Coming soon)</NavLink>
+                                                <NavLink>International  Students  <span className='text-light_green'>(Coming soon)</span></NavLink>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li className='lg:text-sm'>B2B</li>
+                                    <li className='lg:text-sm'>B2B
+                                        <ul className='sub-menu1 bg-white lg:min-w-[250px]'>
+                                            <li>
+                                                <NavLink to='institution'>Banking as a Service <span className='text-light_green'>(Coming soon)</span></NavLink>
+                                            </li>
+                                        </ul>
+                                    </li>
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>

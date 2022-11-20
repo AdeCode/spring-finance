@@ -5,6 +5,10 @@ const fetchCountries = () => {
     return http.get('/countries')
 }
 
+const fetchAllCountries = () => {
+    return http.get('/web')
+}
+
 const getInstitutions = async() => {
     try{
         const {data} = await http.get('/institutions')
@@ -49,6 +53,7 @@ const services = {
     getInstitutions,
     getInstitutionsByCountry,
     submitInstitutionForm,
+    fetchAllCountries,
 }
 
 export default services

@@ -4,7 +4,7 @@ import services from '../services/FormService'
 import {validate} from '../common/index'
 
 function InstitutionForm() {
-    const {submitInstitutionForm, fetchCountries} = services;
+    const {submitInstitutionForm, fetchCountries, fetchAllCountries} = services;
 
     const [formData, setFormData] = useState({
         name: '',
@@ -16,7 +16,8 @@ function InstitutionForm() {
     const [countries, setCountries] = useState(null)
     
     const getCountries = async() => {
-        await fetchCountries().then(response => {
+        await fetchAllCountries().then(response => {
+            console.log(response.data.data.results)
             setCountries(response.data.data.results)
         })
         .catch(e => {
@@ -97,7 +98,7 @@ function InstitutionForm() {
                         { countries &&
                             countries.map(country => {
                                 return (
-                                    <option key={country.id} value={country.name}>{country.name}</option>
+                                    <option key={country.id} value={country.country_name}>{country.country_name}</option>
                                 )
                             })
                         }
