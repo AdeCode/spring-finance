@@ -75,7 +75,7 @@ function WaitlistForm() {
             <div class="form">
                 <form>
                     <div class="form-group flex flex-col mb-6">
-                        <label for="email" class="text-xl text-label_text mb-[5px]">Email address*</label>
+                        <label htmlFor="email" class="text-xl text-label_text mb-[5px]">Email address*</label>
                         <input
                             type="email"
                             required={true}
@@ -87,7 +87,7 @@ function WaitlistForm() {
                         />
                     </div>
                     <div class="form-group flex flex-col mb-6">
-                        <label for="coutry" class="text-xl text-label_text mb-[5px]"> Please associate yourself as a/an...</label>
+                        <label htmlFor="coutry" class="text-xl text-label_text mb-[5px]"> Please associate yourself as a/an...</label>
                         <div class="flex">
                             <span class="flex items-center">
                                 <input

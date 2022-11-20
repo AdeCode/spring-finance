@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import { ToastContainer, toast } from 'react-toastify';
 import edu from '../images/Iconedu.png'
@@ -27,13 +27,12 @@ function InstitutionPage() {
             let selectedCountry = country.filter(coun => coun.name === value)
             filterCountries(selectedCountry[0].id)
         }
-       
     }
 
     const filterCountries = (id) => {
-        console.log('right here...')
         let institutions = services.getInstitutionsByCountry(id)
         institutions.then((res) => {
+            console.log(res)
             setInstitution(res)
         })
     }
@@ -41,13 +40,12 @@ function InstitutionPage() {
     useEffect(() => {
         let countries = services.fetchCountries()
         countries.then((res) => {
-            setCountry(res)
-        })       
+            setCountry(res.data.data.results)
+        })      
     }, [formData.country])
 
     const submitForm = async(e) => {
         e.preventDefault()
-        console.log(formData)
         if(validate(formData.country) === false) {
             return toast("The country field can not be empty.")
         }
@@ -77,7 +75,7 @@ function InstitutionPage() {
                 <div className='w-[50%] lg:hidden'>
                     <div className="form text-white">
                         <div className="form-group flex flex-col mb-3 lg:w-full">
-                            <label for="email" className="font-normal text-[10px] mb-[3px]">Country*</label>
+                            <label htmlFor="email" className="font-normal text-[10px] mb-[3px]">Country*</label>
                             <select
                                 type="text"
                                 required
@@ -87,17 +85,17 @@ function InstitutionPage() {
                                 onChange={handleInputChange}
                             >
                                 <option>Select country of study</option>
-                                {
+                                {country &&
                                     country.map(country => {
                                         return (
-                                            <option value={country.name}>{country.name}</option>
+                                            <option key={country.id} value={country.name}>{country.name}</option>
                                         )
                                     })
                                 }
                             </select>
                         </div>
                         <div className="form-group flex flex-col mb-[3px]">
-                            <label for="email" className="font-normal text-[10px] mb-[3px]">Institution*</label>
+                            <label htmlFor="email" className="font-normal text-[10px] mb-[3px]">Institution*</label>
                             <select
                                 required
                                 value={formData.institution}
@@ -144,7 +142,7 @@ function InstitutionPage() {
                                 onChange={handleInputChange}
                             >
                                 <option>Select country of study</option>
-                                {
+                                { country &&
                                     country.map(country => {
                                         return (
                                             <option key={country.id} value={country.name}>{country.name}</option>
@@ -164,7 +162,7 @@ function InstitutionPage() {
                                 onChange={handleInputChange}
                             >
                                 <option>Confirm institution name</option>
-                                {
+                                {institution &&
                                     institution.map(institution => {
                                         return (
                                             <option key={institution.id} value={institution.institution_name}>{institution.institution_name}</option>

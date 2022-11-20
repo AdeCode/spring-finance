@@ -8,14 +8,13 @@ import vision from '../images/about/vision.png'
 import Partners from '../components/Partners'
 import Modal from '../components/Modal'
 import WaitlistForm from '../components/WaitlistForm'
-import lefti from '../images/lefti.png'
-import right from '../images/rightC.png'
-import lside from '../images/about/lside.png'
-import rside from '../images/about/rside.png'
+import services from '../services/FormService'
 
 
 function AboutUs() {
     const [modal, setModal] = useState(false)
+    const {submitBusinessForm} = services
+    submitBusinessForm()
 
     const closeModal = () => {
         setModal(false)

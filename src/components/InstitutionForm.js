@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import { ToastContainer, toast } from 'react-toastify';
 import services from '../services/FormService'
-import http from '../shared/http';
 import {validate} from '../common/index'
 
 function InstitutionForm() {
+    const {submitInstitutionForm, fetchCountries, fetchAllCountries} = services;
+
     const [formData, setFormData] = useState({
         name: '',
         country: '',
@@ -12,38 +13,20 @@ function InstitutionForm() {
         institution: '',
         more: 'Anything you want us to know?'
     })
-    const [countries, setCountries] = useState([])
+    const [countries, setCountries] = useState(null)
     
-
-
-    const getInstitutions = async() => {
-        try{
-            const {data} = await http.get('/institutions')
-            const institutions = data.data.results
-            //console.log(institutions)
-            return institutions
-        }catch(err){
-            console.log(err)
-        }
-    }
-
     const getCountries = async() => {
-        try{
-            const {data} = await http.get('/countries')
-            const countries = data.data.results
-            setCountries(countries)
-            return countries
-        }catch(err){
-            console.log(err)
-        }
+        await fetchAllCountries().then(response => {
+            console.log(response.data.data.results)
+            setCountries(response.data.data.results)
+        })
+        .catch(e => {
+            console.log(e);
+        })
     }
 
     useEffect(() => {
         getCountries()
-        // let result = getInstitutions()
-        // result.then((res) => {
-        //     setInstitution(res)
-        // })
     }, [])
     
 
@@ -55,7 +38,6 @@ function InstitutionForm() {
 
     const submitForm = async(e) => {
         e.preventDefault()
-        console.log(formData)
         if(validate(formData.name) === false) {
             return toast("The name field can not be empty.")
         }
@@ -68,10 +50,8 @@ function InstitutionForm() {
         if(validate(formData.institution) === false) {
             return toast("The institution field can not be empty.")
         }
-        try{
-            const res = await http.post('/web/institutions', formData)
-            toast("Form submitted succesfully.")
-            console.log(res)
+        submitInstitutionForm(formData)
+        .then(response => {
             setFormData({
                 name: '',
                 country: '',
@@ -79,11 +59,14 @@ function InstitutionForm() {
                 institution: '',
                 more:''
             })
-        }catch(err){
-            console.log(err)
+            toast("Form submitted succesfully.")
+        })
+        .catch(e => {
+            console.log(e)
             toast("An Error Occured!")
-        }
+        });
     }
+
 
   return (
     <div className='lg:bg-white lg:py-9 lg:px-20 px-[50px]'>
@@ -91,7 +74,7 @@ function InstitutionForm() {
             <form>
 
                 <div className="form-group flex flex-col mb-6 lg:w-full">
-                    <label for="name" className="text-base text-label_text mb-[5px]">First & Last Name</label>
+                    <label htmlFor="name" className="text-base text-label_text mb-[5px]">First & Last Name</label>
                     <input
                         type="text"
                         required
@@ -103,7 +86,7 @@ function InstitutionForm() {
                     />
                 </div>
                 <div className="form-group flex flex-col mb-6 lg:w-full">
-                    <label for="country" className="text-base text-label_text mb-[5px]">Country*</label>
+                    <label htmlFor="country" className="text-base text-label_text mb-[5px]">Country*</label>
                     <select
                         required
                         className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
@@ -112,17 +95,17 @@ function InstitutionForm() {
                         onChange={handleInputChange}
                     >
                         <option value=''>Select a country</option>
-                        {
+                        { countries &&
                             countries.map(country => {
                                 return (
-                                    <option value={country.name}>{country.name}</option>
+                                    <option key={country.id} value={country.country_name}>{country.country_name}</option>
                                 )
                             })
                         }
                     </select>
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    <label for="institution" className="text-base text-label_text mb-[5px]">Email address*</label>
+                    <label htmlFor="institution" className="text-base text-label_text mb-[5px]">Email address*</label>
                     <input
                         type="email"
                         required
@@ -134,7 +117,7 @@ function InstitutionForm() {
                     />
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    <label for="institution" className="text-base text-label_text mb-[5px]">Your institution?</label>
+                    <label htmlFor="institution" className="text-base text-label_text mb-[5px]">Your institution?</label>
                     <input
                         type="text"
                         required
@@ -144,33 +127,9 @@ function InstitutionForm() {
                         name='institution'
                         onChange={handleInputChange}
                     />
-                    {/* <select
-                        required
-                        value={formData.institution}
-                        className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2"
-                        name='institution'
-                        onChange={handleInputChange}
-                    >
-                        <option>Select an institution</option>
-                        {
-                            institution.map(data => {
-                                return (
-                                    <option value={data.institution_name}>{data.institution_name}</option>
-                                )
-                            })
-                        }
-                    </select> */}
                 </div>
                 <div className="form-group flex flex-col mb-6">
-                    {/* <input
-                        type="text"
-                        required
-                        value={formData.more}
-                        className="form-control h-[45px] w-full border-2 border-light_gray rounded-md px-2 lg:h-[200px]"
-                        placeholder="Anything you want us to know?"
-                        name='more'
-                        onChange={handleInputChange}
-                    /> */}
+                   
                     <textarea
                         className="form-control w-full border-2 border-light_gray rounded-md px-2"
                         rows="4"
