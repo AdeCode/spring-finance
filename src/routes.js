@@ -9,6 +9,7 @@ import Layout from './common/Layout';
 import NotFound from './components/NotFound';
 import Login from './pages/Login';
 import Dashboard from './components/Dashboard';
+import ComingSoon from './pages/ComingSoon';
 
 
 function Routers() {
@@ -27,6 +28,7 @@ function Routers() {
           </Route>
           <Route path='/login' element={< Login />}></Route>
           <Route path='/dashboard' element={< Dashboard />}></Route>
+          <Route path='/holiday-card' element={< ComingSoon />}></Route>
         </Routes>
       </ScrollToTop>
     </Router>
