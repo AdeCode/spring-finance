@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import Routers from './routes';
-
-function App() {
-  return (
-    <Routers/>
-=======
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import LandingPage from "./pages/LandingPage";
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -14,9 +7,11 @@ import InstitutionPage from './pages/InstitutionPage';
 import AboutUs from './pages/AboutUs';
 import Layout from './common/Layout';
 import NotFound from './components/NotFound';
-import ComingSoon from './pages/ComingSoon';
+import Login from './pages/Login';
+import Dashboard from './components/Dashboard';
 
-function App() {
+
+function Routers() {
   return (
     <Router>
       <ScrollToTop>
@@ -30,12 +25,12 @@ function App() {
             <Route path='/about' element={< AboutUs />}></Route>
             <Route path='*' element={<NotFound/>}/>
           </Route>
-          <Route path='/coming-soon' element={< ComingSoon />}></Route>
+          <Route path='/login' element={< Login />}></Route>
+          <Route path='/dashboard' element={< Dashboard />}></Route>
         </Routes>
       </ScrollToTop>
     </Router>
->>>>>>> 86effb367370fc011262ae6a839478e0553dee81
-  );
+  )
 }
 
-export default App;
+export default Routers

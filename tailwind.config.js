@@ -27,6 +27,10 @@ module.exports = {
         'st_text' : '#7C8087',
         'placeholder' : '#8C97AC',
         'bg_light' : '#F0F1FC',
+        'input_text' : '#2A3342',
+        'label' : '#333F51',
+        'app_bar' : '#E5E5E5',
+        'bg_dark' : '#262626',
       },
       backgroundImage: {
         'mobileBg': "url('./images/institution/BG-mobile.png')",
