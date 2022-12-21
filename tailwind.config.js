@@ -41,11 +41,13 @@ module.exports = {
         'purpleMB' : "url('./images/about/purpleMB.png')",
         'institute' : "url('./images/institution/BGinstitute.png')",
         'aboutBtmBG' : "url('./images/about/aboutBG.png')",
+        'comingBG' : "url('./images/coming.png')",
 
       }
     },
     fontFamily: {
       'Gilroy': ['Gilroy'],
+      'Playfair' : ['Playfair Display', 'serif'],
     }
   },
   plugins: [],
