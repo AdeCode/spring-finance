@@ -90,8 +90,8 @@ function Navbar() {
                             <li className='' onClick={closeMenu}>
                                 <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 lg:p-0 leading-[20px]'>
                                     Products
-                                    <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl'>New</h3>
-                                    <MdOutlineKeyboardArrowDown />
+                                    <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl lg:hidden'>New</h3>
+                                    <MdOutlineKeyboardArrowDown className='lg:hidden'/>
                                 </span>
 
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
