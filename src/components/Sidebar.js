@@ -1,15 +1,10 @@
 import React, { useState } from 'react'
-import { AiOutlineMenu } from "react-icons/ai";
-import { FiUsers } from "react-icons/fi";
-import { FiFileText } from "react-icons/fi";
-import { FiUser } from "react-icons/fi";
 import Logo from '../images/logo.png'
 import menu from '../images/dashboard/menu.png'
 import mobileLogo from '../images/dashboard/nlogo.png'
 import styled from 'styled-components';
-import { MdKeyboardArrowDown } from "react-icons/md";
-import { MdKeyboardArrowUp } from "react-icons/md";
-
+import {SidebarData} from '../components/@shared/sideBarData'
+import SubMenu from './SubMenu';
 
 
 
@@ -35,15 +30,25 @@ function Sidebar() {
                     {/* <AiOutlineMenu /> */}
                 </button>
                 :
-                <div className={`btn p-[15px] cursor-pointer flex gap-[18.5px] w-[248px] ${open ? 'hidden' : 'flex'}`}
+                <div className={`btn p-[15px] cursor-pointer flex gap-[18.5px] w-[248px] ${open ? 'hidden' : 'flex'} mb-9`}
                     onClick={toggleButton}
                 >
                     <img src={menu} alt='menu'/>
                     <h3 className='font-medium text-base'>Dashboard</h3>
                 </div>
             }
+
+
+            <nav>
+                <div>
+                    {
+                        SidebarData.map((item, index) => {
+                        return <SubMenu item={item} key={index} />;
+                    })}
+                </div>
+            </nav>
             
-            <ul className='flex flex-col lg:mt-9'>
+            {/* <ul className='flex flex-col lg:mt-9'>
                 <li className='flex flex-col' key={1}>
                     <div className='flex justify-between pr-6 items-center mb-[30px]' onClick={menuToggle}>
                         <h3 className='font-medium text-base'>People</h3>
@@ -116,7 +121,7 @@ function Sidebar() {
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul> */}
         </Div>
     )
 }

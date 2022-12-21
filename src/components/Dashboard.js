@@ -31,7 +31,7 @@ const Container = styled.div`
     /* background: rgba(246, 246, 246, 0.34); */
 
     .main{
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
 `
 export default Dashboard
