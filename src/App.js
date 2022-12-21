@@ -7,6 +7,7 @@ import InstitutionPage from './pages/InstitutionPage';
 import AboutUs from './pages/AboutUs';
 import Layout from './common/Layout';
 import NotFound from './components/NotFound';
+import ComingSoon from './pages/ComingSoon';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/about' element={< AboutUs />}></Route>
             <Route path='*' element={<NotFound/>}/>
           </Route>
+          <Route path='/coming-soon' element={< ComingSoon />}></Route>
         </Routes>
       </ScrollToTop>
     </Router>
