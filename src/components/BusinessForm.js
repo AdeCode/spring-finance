@@ -49,7 +49,7 @@ function BusinessForm() {
                 };
                 console.log(bodyParams)
 
-                fetch('https://frkrvith3d.execute-api.us-east-1.amazonaws.com/api/business', {
+                fetch('https://frkrvith3d.execute-api.us-east-1.amazonaws.com/api/web/business', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
