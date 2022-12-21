@@ -131,6 +131,9 @@ function Navbar() {
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
+                                <NavLink to='./holiday-card' style={style}>Holiday Card</NavLink>
+                            </li>
+                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 <NavLink to='./about' style={style}>About</NavLink>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
