@@ -130,8 +130,7 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
-                                {/* <NavLink to='./holiday-card' style={style}>Holiday Card</NavLink> */}
+                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px] text  lg:font-semibold lg:text-lg lg:m-0'>
                                 <a href='https://holidaycards.getspring.finance/'>Holiday Card</a>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
