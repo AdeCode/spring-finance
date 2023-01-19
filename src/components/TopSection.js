@@ -5,6 +5,10 @@ import Modal from './Modal'
 import WaitlistForm from './WaitlistForm'
 import mobileBan from '../images/mobile_ban.png'
 import deskBan from '../images/desk-ban.png'
+import play from '../images/play.png'
+import playM from '../images/playM.png'
+import apple from '../images/apple.png'
+import appleM from '../images/appleM.png'
 
 function TopSection() {
     const [modal, setModal] = useState(false)
@@ -45,6 +49,32 @@ function TopSection() {
                 <img src={mobileBan} alt='phone' />
             </div>
             <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with <strong>SPRING</strong></h4>
+            <div className='flex lg:gap-3 gap-2 mt-5 justify-center w-full'>
+                <button className='flex play lg:gap-[22px] gap-[13px] lg:py-2 py-1 lg:px-6 px-[14px] rounded-[4px] items-center lg:w-[239px]'>
+                    <div className='hidden lg:flex'>
+                        <img src={play} alt='Google play'/>
+                    </div>
+                    <div className='lg:hidden'>
+                        <img src={playM} alt='Google play'/>
+                    </div>
+                    <div className='flex flex-col items-start'>
+                        <h4 className='font-medium text-[#7C8087] lg:text-sm text-[8px] font-poppings'>Get it on</h4>
+                        <h3 className='font-bold lg:text-xl text-xs text-black'>Google Play</h3>
+                    </div>
+                </button>
+                <button className='flex store lg:gap-[22px] gap-[13px] lg:py-2 py-1 lg:px-6 px-[14px] bg-red rounded-[4px] items-center lg:w-[239px]'>
+                    <div className='hidden lg:flex'>
+                        <img src={apple} alt='apple'/>
+                    </div>
+                    <div className='lg:hidden'>
+                        <img src={appleM} alt='apple'/>
+                    </div>
+                    <div className='flex flex-col items-start'>
+                        <h4 className='font-medium text-black lg:text-sm text-[8px] font-poppings'>Coming soon</h4>
+                        <h3 className='font-bold lg:text-xl text-xs'>App Store</h3>
+                    </div>
+                </button>
+            </div>
 
         </Section>
     )
@@ -91,5 +121,16 @@ const Section = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
+    }
+    .play{
+        background: linear-gradient(128.03deg, rgba(97, 153, 219, 0.1) -0.78%, rgba(75, 202, 105, 0.1) 90.56%);
+        color: #ffffff !important;
+    }
+    .store{
+        background: linear-gradient(128.03deg, #6199DB -0.78%, #4BCA69 90.56%);
+        color: #ffffff !important;
+    }
+    .text{
+        color: #ffffff !important;
     }
 `
