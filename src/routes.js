@@ -7,9 +7,16 @@ import InstitutionPage from './pages/InstitutionPage';
 import AboutUs from './pages/AboutUs';
 import Layout from './common/Layout';
 import NotFound from './components/NotFound';
-import Login from './pages/Login';
+import Login from './pages/auth/Login';
 import Dashboard from './components/Dashboard';
 import ComingSoon from './pages/ComingSoon';
+import Home from './components/dashboard/Home';
+import ForgotPassword from './pages/auth/ForgotPassword';
+import NewPassword from './pages/auth/NewPassword';
+import PasswordChangeSuccess from './pages/auth/PasswordChangeSuccess';
+import Waitlist from './components/dashboard/Waitlist';
+import Customers from './components/dashboard/Customers';
+import Customer from './components/dashboard/Customer';
 
 
 function Routers() {
@@ -27,7 +34,15 @@ function Routers() {
             <Route path='*' element={<NotFound/>}/>
           </Route>
           <Route path='/login' element={< Login />}></Route>
-          <Route path='/dashboard' element={< Dashboard />}></Route>
+          <Route path='/forgot-password' element={< ForgotPassword />}></Route>
+          <Route path='/new-password' element={< NewPassword />}></Route>
+          <Route path='/new-password-success' element={< PasswordChangeSuccess />}></Route>
+          <Route path='/dashboard' element={< Dashboard />}>
+            <Route index element={<Home />} />
+            <Route path='/dashboard/waitlist' element={< Waitlist />}></Route>
+            <Route path='/dashboard/customers' element={< Customers />}></Route>
+            <Route path='/dashboard/customer' element={< Customer />}></Route>
+          </Route>
           <Route path='/holiday-card' element={< ComingSoon />}></Route>
         </Routes>
       </ScrollToTop>

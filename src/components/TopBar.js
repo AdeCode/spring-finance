@@ -7,8 +7,8 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 
 function TopBar() {
   return (
-    <Div className='bg-white flex justify-between w-full py-6 pl-[51px] pr-12'>
-        <div className='flex items-center lg:py-[11px] bg-app_bar gap-3 px-[18px] lg:w-[526px] rounded-[5px]'>
+    <Div className='bg-white flex justify-between w-full h-[86px] py-3 pl-[51px] pr-12'>
+        <div className='flex items-center lg:py-[4px] bg-app_bar gap-3 px-2 lg:w-[526px] rounded-[5px]'>
             <span>
                 <img src={search} alt='search' />
             </span>

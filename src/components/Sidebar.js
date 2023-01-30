@@ -5,12 +5,14 @@ import mobileLogo from '../images/dashboard/nlogo.png'
 import styled from 'styled-components';
 import {SidebarData} from '../components/@shared/sideBarData'
 import SubMenu from './SubMenu';
+import {useNavigate} from 'react-router-dom'
 
 
 
 function Sidebar() {
     const [open, setOpen] = useState(false)
     const [openMenu, setOpenMenu] = useState(false)
+    const navigate = useNavigate()
 
     const toggleButton = () => {
         setOpen(!open)
@@ -21,13 +23,12 @@ function Sidebar() {
     }
 
     return (
-        <Div className='sidebar w-fit p-6 bg-white text-[#324054]'>
+        <Div className='sidebar w-fit h-[100vh] p-3 bg-white text-[#324054]'>
             <img src={Logo} alt='logo' className={`${open ? 'hidden' : 'flex'}`}/>
-            {
+            {/* {
                 open ? 
                 <button className='' onClick={toggleButton}>
                     <img src={mobileLogo} alt='mobile-logo' />
-                    {/* <AiOutlineMenu /> */}
                 </button>
                 :
                 <div className={`btn p-[15px] cursor-pointer flex gap-[18.5px] w-[248px] ${open ? 'hidden' : 'flex'} mb-9`}
@@ -36,7 +37,13 @@ function Sidebar() {
                     <img src={menu} alt='menu'/>
                     <h3 className='font-medium text-base'>Dashboard</h3>
                 </div>
-            }
+            } */}
+            <div className={`btn p-[15px] cursor-pointer flex gap-[18.5px] w-[248px] mb-9`}
+                onClick={()=>navigate('/dashboard')}
+            >
+                <img src={menu} alt='menu'/>
+                <h3 className='font-medium text-base'>Dashboard</h3>
+            </div>
 
 
             <nav>

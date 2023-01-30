@@ -14,7 +14,7 @@ function SubMenu({item}) {
     align-items: center;
     /* padding: 20px; */
     list-style: none;
-    height: 60px;
+    height: 50px;
     text-decoration: none;
     font-size: 16px;
     line-height: 20px;
@@ -35,7 +35,7 @@ const SidebarLabel = styled.span`
 
 const DropdownLink = styled(Link)`
   background: linear-gradient(128.03deg, rgba(97, 153, 219, 0.1) -0.78%, rgba(75, 202, 105, 0.1) 90.56%);
-  height: 60px;
+  height: 50px;
   padding-left: 1.5rem;
   display: flex;
   align-items: center;
@@ -76,7 +76,7 @@ const Arrow = styled.div`
         {subnav &&
             item.subNav.map((item, index) => {
             return (
-                <DropdownLink to='' key={index}>
+                <DropdownLink to={item.path} key={index}>
                     <span className='text-sm lg:text-2xl'> 
                         {item.icon}
                     </span>

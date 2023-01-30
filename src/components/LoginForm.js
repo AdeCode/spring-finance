@@ -3,6 +3,7 @@ import InputField from './@shared/InputField'
 import { Formik, Form } from 'formik'
 import * as Yup from 'yup'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 
 function LoginForm() {
@@ -48,8 +49,12 @@ function LoginForm() {
                             type='password'
                             placeholder='enter your password'
                             label='Password'
+                            icon={true}
                         />
-                        <button type="submit" disabled={isSubmitting} className='w-full py-[11px] text-white text-[16px] mt-[23px]'>
+                        <div className='flex justify-end'>
+                            <Link to='/forgot-password' className='forgot text-[#4BCA69] font-normal text-sm'>Forgot Password?</Link>
+                        </div>
+                        <button type="submit" disabled={isSubmitting} className='w-full py-[11px] text-white text-[16px] mt-[13px]'>
                             {
                                 loginMutation.isLoading 
                                 ? "Please wait..." 
@@ -71,6 +76,7 @@ const Section = styled.section`
         box-shadow: 0px 1px 2px rgba(105, 81, 255, 0.05);
         border-radius: 6px;
     }
+   
 `
 
 export default LoginForm

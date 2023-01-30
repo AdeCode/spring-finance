@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import LoginForm from '../components/LoginForm'
-import currency from '../images/auth/currency.png'
-import logo from '../images/logo1.png'
+import LoginForm from '../../components/LoginForm'
+import currency from '../../images/auth/currency.png'
+import logo from '../../images/logo1.png'
 
 function Login() {
     return (
