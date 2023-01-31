@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import CustomTable from '../@shared/CustomTable'
 import CustomerTable from '../@shared/CustomerTable'
+import CustomerListTable from '../@tables/CustomerListTable'
+
 
 const headers = [
     {
@@ -39,10 +41,11 @@ const headers = [
 function Customers() {
   return (
     <Section className='flex flex-col'>
-        <div className='flex mb-8'>
+        {/* <div className='flex mb-8'>
             <h2 className='text-[#6A707E] text-2xl font-semibold'>Customers List</h2>
-        </div>
-        <CustomerTable/>
+        </div> */}
+        {/* <CustomerTable/> */}
+        <CustomerListTable/>
     </Section>
   )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import SummaryCard from '../@shared/SummaryCard'
 import waitListData from '../@shared/waitListData'
+import WaitingListTable from '../@tables/WaitingList'
 
 function Waitlist() {
   return (
@@ -20,6 +21,9 @@ function Waitlist() {
                     )
                 })
             }
+        </div>
+        <div className="mt-6">
+            <WaitingListTable/>
         </div>
     </Section>
   )

@@ -8,6 +8,7 @@ import Spending from '../@shared/Spending'
 import Customers from '../@shared/Customers'
 import RecentActivity from '../RecentActivity'
 import cardData from '../@shared/cardData'
+import CustomerTable from '../@tables/CustomerTable'
 
 // const cardData = [
 //     {
@@ -62,7 +63,8 @@ function Home() {
                     })}
                 </div>
                 <Spending/>
-                <Customers/>
+                {/* <Customers/> */}
+                <CustomerTable/>
             </div>
             <div className='w-[23%] flex-col gap-6 fix'>
                 <div className='w-[324px] h-[325px] bg-white rounded-md'>

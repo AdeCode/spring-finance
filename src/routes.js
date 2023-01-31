@@ -17,6 +17,9 @@ import PasswordChangeSuccess from './pages/auth/PasswordChangeSuccess';
 import Waitlist from './components/dashboard/Waitlist';
 import Customers from './components/dashboard/Customers';
 import Customer from './components/dashboard/Customer';
+import BasicTable from './components/@shared/BasicTable';
+import Example from './components/@shared/AdvancedT';
+import CustomerTable from './components/@tables/CustomerTable';
 
 
 function Routers() {
@@ -42,6 +45,9 @@ function Routers() {
             <Route path='/dashboard/waitlist' element={< Waitlist />}></Route>
             <Route path='/dashboard/customers' element={< Customers />}></Route>
             <Route path='/dashboard/customer' element={< Customer />}></Route>
+            <Route path='/dashboard/basicTable' element={< BasicTable />}></Route>
+            <Route path='/dashboard/advanced' element={< Example />}></Route>
+            <Route path='/dashboard/customer-table' element={< CustomerTable />}></Route>
           </Route>
           <Route path='/holiday-card' element={< ComingSoon />}></Route>
         </Routes>
