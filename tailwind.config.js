@@ -31,6 +31,7 @@ module.exports = {
         'label' : '#333F51',
         'app_bar' : '#E5E5E5',
         'bg_dark' : '#262626',
+        'blue_text' : '#334D6E',
       },
       backgroundImage: {
         'mobileBg': "url('./images/institution/BG-mobile.png')",

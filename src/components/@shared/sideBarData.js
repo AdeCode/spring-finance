@@ -30,12 +30,12 @@ export const SidebarData = [
 		},
 		{
 			title: "Waitlist",
-			path: "",
+			path: "/dashboard/waitlist",
 			icon: <FiFileText />,
 		},
 		{
 			title: "Customers",
-			path: "",
+			path: "/dashboard/customers",
 			icon: <FiUser />,
 		},
 	],

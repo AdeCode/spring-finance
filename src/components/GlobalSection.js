@@ -5,6 +5,9 @@ import Icon4 from '../images/Icon4.png'
 import Icon2 from '../images/Icon2.png'
 import Icon33 from '../images/Icon33.png'
 import Icon1 from '../images/Icon1.png'
+import playWhite from '../images/play-white.png'
+import apple from '../images/apple.png'
+import appleM from '../images/appleM.png'
 import leftC from '../images/leftC.png'
 import lefti from '../images/lefti.png'
 import lft from '../images/lft.png'
@@ -71,7 +74,30 @@ function GlobalSection() {
                 <div className='font-medium text-[10px] tracking-tight lg:text-[39px] flex flex-col items-center lg:leading-[47px] py-[20px]  lg:py-[70px] lg:justify-center text-white'>
                     <h2 className='w-[156px] lg:w-[609px] text-center'>Start sending money to friends, family, businesses and international schools with Spring today.</h2>
                     <span className='w-[156px] lg:w-[609px] text-center lg:mt-[40px] mt-[6px]'>No stress or expensive fees.</span>
-                    <button onClick={openModal} className='text-blue-bg font-semibold text-sm lg:text-lg bg-white py-1 px-[10px] lg:py-4 lg:px-11 mt-[6px] lg:mt-10'>Join our waitlist</button>
+                    <button onClick={openModal} className='text-blue-bg font-semibold text-sm lg:text-lg bg-white py-1 px-[10px] lg:py-3 lg:px-11 mt-[6px] lg:mt-10 rounded-lg'>Join our waitlist</button>
+                    <div className='lg:mt-5 mt-[6px] flex lg:gap-2 gap-[2px]'>
+                        <button className='flex items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] lg:gap-4 lg:w-[189px]'>
+                            <div>
+                                <img src={playWhite} alt='play store'/>
+                            </div>
+                            <div className='flex flex-col items-start'>
+                                <h4 className='text-white font-normal lg:text-xs text-[3px]'>Get it on</h4>
+                                <h3 className='font-bold lg:text-lg text-[4.8px]'>Google Play</h3>
+                            </div>
+                        </button>
+                        <button className='flex items-center bg-[#7B61FF] lg:py-[6px] py-[2px] lg:px-5 px-1 rounded-[4px] lg:gap-4 gap-1 lg:w-[189px]'>
+                            <div className='hidden lg:flex'>
+                                <img src={apple} alt='app store'/>
+                            </div>
+                            <div className='lg:hidden'>
+                                <img src={appleM} alt='app store'/>
+                            </div>
+                            <div className='flex flex-col items-start'>
+                                <h4 className='text-white font-normal lg:text-xs text-[3px]'>Coming soon</h4>
+                                <h3 className='font-bold lg:text-lg text-[4.8px]'>App Store</h3>
+                            </div>
+                        </button>
+                    </div>
                 </div>
             </div>
             {/* <div className='bottom hidden w-full bg-blue-bg justify-between lg:flex px-[200px] lg:pt-[100px]'>
