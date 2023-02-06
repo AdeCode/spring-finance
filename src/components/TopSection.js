@@ -37,9 +37,9 @@ function TopSection() {
             </h1>
             <div className='lg:flex lg:flex-col lg:absolute lg:top-[5%] lg:items-center'>
                 <p className='lg:w-[748px] text-left lg:text-center mt-3 lg:mt-8'> <span className='title'>Send</span>  payments to businesses,  <span className='title'>Request/Send</span> money to friends & family and <span className='title'>Pay</span> your international tuiton fees with no fuss.</p>
-                <div onClick={openModal} href='./' className='btn cursor-pointer w-[100%] lg:w-fit lg:flex lg:justify-center lg:py-4 py-[13.5px] text-center lg:px-8 text-white mt-3 lg:mt-9'>
+                {/* <div onClick={openModal} href='./' className='btn cursor-pointer w-[100%] lg:w-fit lg:flex lg:justify-center lg:py-4 py-[13.5px] text-center lg:px-8 text-white mt-3 lg:mt-9'>
                     Join our waitlist
-                </div>
+                </div> */}
             </div>
 
             <div className='hidden lg:flex'>
@@ -49,7 +49,7 @@ function TopSection() {
                 <img src={mobileBan} alt='phone' />
             </div>
             <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with <strong>SPRING</strong></h4>
-            <div className='flex lg:gap-3 gap-2 mt-5 justify-center w-full'>
+            {/* <div className='flex lg:gap-3 gap-2 mt-5 justify-center w-full'>
                 <button className='flex play lg:gap-[22px] gap-[13px] lg:py-2 py-1 lg:px-6 px-[14px] rounded-[4px] items-center lg:w-[239px]'>
                     <div className='hidden lg:flex'>
                         <img src={play} alt='Google play'/>
@@ -74,6 +74,30 @@ function TopSection() {
                         <h3 className='font-bold lg:text-xl text-xs'>App Store</h3>
                     </div>
                 </button>
+            </div> */}
+
+            <div className='lg:mt-0 mt-[6px] flex lg:gap-2 gap-[2px] lg:py-2'>
+                <a href='https://play.google.com/store/apps/details?id=com.getspring.finance' target='_blank' rel='noreferrer' className='flex play items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] lg:gap-4 lg:w-[199px]'>
+                    <div>
+                        <img src={play} alt='play store' />
+                    </div>
+                    <div className='flex flex-col items-start'>
+                        <h4 className='lg:text-[#7C8087] font-normal lg:text-xs text-[3px]'>Get it on</h4>
+                        <h3 className='font-bold lg:text-lg text-black text-[4.8px] text-left'>Google Play</h3>
+                    </div>
+                </a>
+                <a href='/' className='flex store items-center lg:py-[6px] py-[2px] lg:px-5 px-1 rounded-[4px] lg:gap-4 gap-1 lg:w-[199px]'>
+                    <div className='hidden lg:flex'>
+                        <img src={apple} alt='app store' />
+                    </div>
+                    <div className='lg:hidden'>
+                        <img src={appleM} alt='app store' />
+                    </div>
+                    <div className='flex flex-col items-start text-white'>
+                        <span className='text-white lg:text-xs text-[3px] font-normal'>Coming soon</span>
+                        <h3 className='font-bold lg:text-lg text-[4.8px] text-white'>App Store</h3>
+                    </div>
+                </a>
             </div>
 
         </Section>

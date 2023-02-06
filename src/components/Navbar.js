@@ -11,6 +11,11 @@ import { Link, NavLink } from 'react-router-dom';
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import close from '../images/close.png'
 import './Navbar.css'
+import playWhite from '../images/play-white.png'
+import apple from '../images/apple.png'
+import appleM from '../images/appleM.png'
+import play from '../images/play.png'
+
 
 function Navbar() {
     const [mobileMenu, setMobileMenu] = useState(false)
@@ -76,33 +81,33 @@ function Navbar() {
                 </Modal>
             }
             <nav className='flex py-5 px-7  justify-between lg:gap-5 lg:h-[80px] items-center' id='top'>
-                <div className='flex justify-between items-center w-full lg:px-[200px]'>
+                <div className='flex justify-between items-center w-full lg:px-[100px]'>
                     <div className='logo w-[90px] lg:w-[120px]'>
                         <Link to='./'>
                             <img src={logo} alt='Spring Finance Logo' />
                         </Link>
                     </div>
                     <div className='nav-menu'>
-                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-9 lg:items-center lg:h-[100%] z-10`}>
+                        <ul className={`${mobileMenu ? 'mobile' : 'hidden'} lg:flex lg:justify-end lg:gap-12 lg:items-center lg:h-[100%] z-10`}>
                             <div className='flex justify-end lg:hidden my-4' onClick={() => setMobileMenu(false)}>
                                 <img src={close} alt='close' />
                             </div>
                             <li className='' onClick={closeMenu}>
                                 <span className='menu flex items-center gap-[3px] lg:gap-[6px] cursor-pointer font-semibold text-lg lg:m-0 lg:p-0 leading-[20px]'>
                                     Products
-                                    <h3 className='flex new font-normal text-sm py-1 px-3 rounded-2xl lg:hidden'>New</h3>
-                                    <MdOutlineKeyboardArrowDown className='lg:hidden'/>
+                                    <h3 className='flex new font-normal text-xs py-1 px-3 rounded-2xl'>New</h3>
+                                    <MdOutlineKeyboardArrowDown className=''/>
                                 </span>
 
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
-                                    <li className='lg:text-sm'>P2P Payment</li>
-                                    <li className='lg:text-sm'>SMEs Payments</li>
-                                    <li className='lg:text-sm'>Cross-border Tuition Payments</li>
-                                    <li className='lg:text-sm'>BaaS (Banking as a Service)</li>
+                                    <li className='lg:text-sm font-semibold'>P2P Payment</li>
+                                    <li className='lg:text-sm font-semibold'>SMEs Payments</li>
+                                    <li className='lg:text-sm font-semibold'>Cross-border Tuition Payments</li>
+                                    {/* <li className='lg:text-sm'>BaaS (Banking as a Service)</li> */}
                                     <li className='lg:text-sm'>Global Payout/Payins</li>
                                     <li className='lg:text-sm'>Cross-border Virtual Wallets & Cards</li>
                                     <li className='lg:text-sm'>Domestic & Foreign Virtual Accounts</li>
-                                    <li className='lg:text-sm'>API</li>
+                                    {/* <li className='lg:text-sm'>API</li> */}
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
@@ -130,19 +135,19 @@ function Navbar() {
                                     </li>
                                 </ul>
                             </li>
-                            <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px] text  lg:font-semibold lg:text-lg lg:m-0'>
+                            {/* <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px] text  lg:font-semibold lg:text-lg lg:m-0'>
                                 <a href='https://holidaycards.getspring.finance/'>Holiday Card</a>
-                            </li>
+                            </li> */}
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 <NavLink to='./about' style={style}>About</NavLink>
                             </li>
                             {/* <li className='font-medium text-[22px] pb-[24.6px] lg:p-0 leading-[20px] lg:font-semibold lg:text-lg lg:m-0'>
                                 About
-                            </li>
+                            </li>*/}
                             <li className='font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
                                 FAQ
-                            </li> */}
-                            <div className='flex flex-col lg:w-[30%] lg:hidden'>
+                            </li> 
+                            {/* <div className='flex flex-col lg:w-[30%] lg:hidden'>
                                 <div onClick={openModal} className='mobile-btn cursor-pointer'>Join our waitlist</div>
                                 <span onClick={openModal} className='mobile-btn reg cursor-pointer'>Register Now</span>
                             </div>
@@ -152,10 +157,33 @@ function Navbar() {
                                 </h4>
                                 <div className='btn cursor-pointer' onClick={openBusinessModal}>Register Now</div>
                                 <ToastContainer />
-                            </div>
+                            </div> */}
 
                         </ul>
 
+                    </div>
+                    <div className='lg:mt-0 mt-[6px] flex lg:gap-2 gap-[2px] lg:py-2'>
+                        <a href='https://play.google.com/store/apps/details?id=com.getspring.finance' target='_blank' rel='noreferrer' className='flex play-store items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] lg:gap-4 lg:w-[199px]'>
+                            <div>
+                                <img src={play} alt='play store'/>
+                            </div>
+                            <div className='flex flex-col items-start'>
+                                <h4 className='text-[#7C8087] font-normal lg:text-xs text-[3px]'>Get it on</h4>
+                                <h3 className='font-bold lg:text-lg text-[4.8px] text-left'>Google Play</h3>
+                            </div>
+                        </a>
+                        <button className='flex app-store items-center lg:py-[6px] py-[2px] lg:px-5 px-1 rounded-[4px] lg:gap-4 gap-1 lg:w-[199px]'>
+                            <div className='hidden lg:flex'>
+                                <img src={apple} alt='app store'/>
+                            </div>
+                            <div className='lg:hidden'>
+                                <img src={appleM} alt='app store'/>
+                            </div>
+                            <div className='flex flex-col items-start'>
+                                <h4 className='text-white font-normal lg:text-xs text-[3px]'>Coming soon</h4>
+                                <h3 className='font-bold lg:text-lg text-[4.8px] text-white'>App Store</h3>
+                            </div>
+                        </button>
                     </div>
                     <button className='lg:hidden flex' onClick={toggleMobileMenu}>
                         <img src={menu} alt='menu' />
@@ -230,6 +258,14 @@ const Nav = styled.div`
             }
 
             
+        }
+
+        .play-store{
+            background: linear-gradient(128.03deg, rgba(97, 153, 219, 0.1) -0.78%, rgba(75, 202, 105, 0.1) 90.56%);
+        }
+
+        .app-store{
+            background: linear-gradient(128.03deg, #6199DB -0.78%, #4BCA69 90.56%);
         }
     }
     
