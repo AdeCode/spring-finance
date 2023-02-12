@@ -49,6 +49,10 @@ function AddStaff() {
                             .required("Phone number is required"),
                         alternateNumber: Yup.string()
                             .required("Phone number is required"),
+                        streetAddress: Yup.string()
+                            .required("Phone number is required"),
+                        streetAddressTwo: Yup.string()
+                            .required("Phone number is required"),
                     })
                 }
                 onSubmit={(values, { setSubmitting }) => {
@@ -135,16 +139,16 @@ function AddStaff() {
                                     </div>
                                 
                                     <InputField
-                                        name='phoneNumber'
+                                        name='streetAddress'
                                         type='text'
-                                        placeholder='E.g Simisola'
-                                        label='Phone Number'
+                                        placeholder='E.g 39 Oluwakemi Street 83759 SimisolaVille '
+                                        label='Street Address'
                                     />
                                     <InputField
-                                        name='alternateNumber'
+                                        name='streetAddressTwo'
                                         type='text'
-                                        placeholder='enter your age'
-                                        label='Phone Number (alternate number)'
+                                        placeholder='E.g 39 Oluwakemi Street 83759 SimisolaVille '
+                                        label='Street Address 2'
                                     />
                                 </div>
                             </div>
