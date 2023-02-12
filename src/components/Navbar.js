@@ -129,7 +129,7 @@ function Navbar() {
                                     <li className='lg:text-sm'>B2B
                                         <ul className='sub-menu1 bg-white lg:min-w-[250px]'>
                                             <li>
-                                                <NavLink to='institution'>Banking as a Service <span className='text-light_green'>(Coming soon)</span></NavLink>
+                                                <NavLink to='dashboard'>Banking as a Service <span className='text-light_green'>(Coming soon)</span></NavLink>
                                             </li>
                                         </ul>
                                     </li>
