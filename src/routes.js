@@ -20,6 +20,10 @@ import Customer from './components/dashboard/Customer';
 import BasicTable from './components/@shared/BasicTable';
 import Example from './components/@shared/AdvancedT';
 import CustomerTable from './components/@tables/CustomerTable';
+import Payins from './components/dashboard/Payins';
+import Payouts from './components/dashboard/Payouts';
+import SpringStaff from './components/dashboard/SpringStaff';
+import AddStaff from './components/dashboard/AddStaff';
 
 
 function Routers() {
@@ -48,6 +52,10 @@ function Routers() {
             <Route path='/dashboard/basicTable' element={< BasicTable />}></Route>
             <Route path='/dashboard/advanced' element={< Example />}></Route>
             <Route path='/dashboard/customer-table' element={< CustomerTable />}></Route>
+            <Route path='/dashboard/payins' element={< Payins />}></Route>
+            <Route path='/dashboard/payouts' element={< Payouts />}></Route>
+            <Route path='/dashboard/spring-staff' element={< SpringStaff />}></Route>
+            <Route path='/dashboard/add-staff' element={< AddStaff />}></Route>
           </Route>
           <Route path='/holiday-card' element={< ComingSoon />}></Route>
         </Routes>

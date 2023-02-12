@@ -104,6 +104,27 @@ export const SidebarData = [
 	],
 },
 {
+	title: "Transactions",
+	path: "",
+	iconClosed: <MdKeyboardArrowDown />,
+	iconOpened: <MdKeyboardArrowUp />,
+
+	subNav: [
+		{
+			title: "Payins",
+			path: "/dashboard/payins",
+			icon: <FiBriefcase />,
+			cName: "sub-nav",
+		},
+		{
+			title: "Payouts",
+			path: "/dashboard/payouts",
+			icon: <IoSchoolOutline />,
+			cName: "sub-nav",
+		},
+	],
+},
+{
 	title: "Baas",
 	path: "",
 	iconClosed: <MdKeyboardArrowDown />,
@@ -118,6 +139,54 @@ export const SidebarData = [
 		},
 		{
 			title: "API requests",
+			path: "",
+			icon: <AiOutlineApi />,
+			cName: "sub-nav",
+		},
+	],
+},
+{
+	title: "Settings",
+	path: "",
+	iconClosed: <MdKeyboardArrowDown />,
+	iconOpened: <MdKeyboardArrowUp />,
+
+	subNav: [
+		{
+			title: "Businesses",
+			path: "",
+			icon: <FiBriefcase />,
+			cName: "sub-nav",
+		},
+		{
+			title: "API requests",
+			path: "",
+			icon: <AiOutlineApi />,
+			cName: "sub-nav",
+		},
+	],
+},
+{
+	title: "Team",
+	path: "",
+	iconClosed: <MdKeyboardArrowDown />,
+	iconOpened: <MdKeyboardArrowUp />,
+
+	subNav: [
+		{
+			title: "Staff of Spring finance",
+			path: "/dashboard/spring-staff",
+			icon: <FiBriefcase />,
+			cName: "sub-nav",
+		},
+		{
+			title: "Add members",
+			path: "/dashboard/add-staff",
+			icon: <AiOutlineApi />,
+			cName: "sub-nav",
+		},
+		{
+			title: "Roles",
 			path: "",
 			icon: <AiOutlineApi />,
 			cName: "sub-nav",

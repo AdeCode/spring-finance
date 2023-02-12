@@ -23,7 +23,7 @@ function Sidebar() {
     }
 
     return (
-        <Div className='sidebar w-fit h-[100vh] p-3 bg-white text-[#324054]'>
+        <Div className='sidebar w-fit h-fit p-3 bg-white text-[#324054]'>
             <img src={Logo} alt='logo' className={`${open ? 'hidden' : 'flex'}`}/>
             {/* {
                 open ? 
