@@ -41,6 +41,20 @@ const data = [
         permission: 'Lorem ipsum dolor sit amet consectetur. Justo et ',
         actions: '',
     },
+    {
+        name: 'Damilola Gbadamosi',
+        email: 'dami@gmail.com',
+        role: 'Admin',
+        permission: 'Lorem ipsum dolor sit amet consectetur. Justo et ',
+        actions: '',
+    },
+    {
+        name: 'Hope Sunday',
+        email: 'hope@gmail.com',
+        role: 'Admin',
+        permission: 'Lorem ipsum dolor sit amet consectetur. Justo et ',
+        actions: '',
+    },
    
 ];
 
@@ -60,7 +74,7 @@ const SpringStaffTable = () => {
                 accessorKey: 'email', 
                 header: 'Email address',
                 Cell: ({ cell }) => {
-                    return <div className="text-[#171F4C] text-sm font-semibold">{cell.getValue()}</div>
+                    return <div className="text-[#171F4C] text-sm font-medium opacity-70">{cell.getValue()}</div>
                 },
             },
             {
@@ -71,7 +85,9 @@ const SpringStaffTable = () => {
                 accessorKey: 'permission',
                 header: 'Permission',
                 enableClickToCopy: true,
-                
+                Cell: ({ cell }) => {
+                    return <div className="text-[#323C47] text-sm font-medium">{cell.getValue()}</div>
+                },
             },
             {
                 accessorKey: 'action',
@@ -128,14 +144,9 @@ const SpringStaffTable = () => {
                         border: 'none',
                     },
                 }}
+                enableTopToolbar={false}
                 renderTopToolbarCustomActions={() => (
                     <Box sx={{display:'flex',paddingTop: '20px', alignItems:'center', gap:'10px',paddingLeft: '12px' }}>
-                        {/* <Box sx={{display:'flex',flexDirection:'column',alignItems:'center',}}>
-                            <Typography color="#334D6E" variant="h2" sx={{ fontSize: '16px',paddingLeft:'0px'}}>
-                                Transactions History
-                            </Typography>
-                            <p>List of payouts done by the user</p>
-                        </Box> */}
                         <div className=''>
                         <p className='text-[#6A707E] text-xl'>Transactions History</p>
                         <p className='text-[#6A707E] text-[13px]'>List of payouts done by the user</p>
@@ -147,7 +158,8 @@ const SpringStaffTable = () => {
                         </span>
                     </Box>
 
-                )}
+                )
+                }
                 muiTableHeadProps={{
                     sx: {
                         backgroundColor: 'red',

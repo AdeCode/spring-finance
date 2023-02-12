@@ -181,7 +181,7 @@ export const SidebarData = [
 		},
 		{
 			title: "Add members",
-			path: "",
+			path: "/dashboard/add-staff",
 			icon: <AiOutlineApi />,
 			cName: "sub-nav",
 		},
