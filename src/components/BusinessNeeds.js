@@ -63,9 +63,9 @@ function BusinessNeeds() {
                             <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing</h2>
                         </div>
                         <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'> Irrespective of where your business is located, you should be discovered and able to collect payments from your customers either as a one-off, automated or recurring payments golbally without frustration. </p>
-                        <div onClick={openBusinessModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
+                        {/* <div onClick={openBusinessModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
                             Register Now
-                        </div>
+                        </div> */}
                     </div>
                     <div className='right'>
                         <div className='hidden lg:flex lg:w-[475px]'>

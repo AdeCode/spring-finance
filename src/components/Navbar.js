@@ -101,7 +101,7 @@ function Navbar() {
 
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
                                     <li className='lg:text-sm font-semibold'>P2P Payment</li>
-                                    <li className='lg:text-sm font-semibold'>SMEs Payments</li>
+                                    <li className='lg:text-sm font-semibold'>SMEs Global Payments</li>
                                     <li className='lg:text-sm font-semibold'>Cross-border Tuition Payments</li>
                                     {/* <li className='lg:text-sm'>BaaS (Banking as a Service)</li> */}
                                     <li className='lg:text-sm'>Global Payout/Payins</li>
