@@ -101,7 +101,7 @@ function Navbar() {
 
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
                                     <li className='lg:text-sm font-semibold'>P2P Payment</li>
-                                    <li className='lg:text-sm font-semibold'>SMEs Payments</li>
+                                    <li className='lg:text-sm font-semibold'>SMEs Global Payments</li>
                                     <li className='lg:text-sm font-semibold'>Cross-border Tuition Payments</li>
                                     {/* <li className='lg:text-sm'>BaaS (Banking as a Service)</li> */}
                                     <li className='lg:text-sm'>Global Payout/Payins</li>
@@ -129,7 +129,7 @@ function Navbar() {
                                     <li className='lg:text-sm'>B2B
                                         <ul className='sub-menu1 bg-white lg:min-w-[250px]'>
                                             <li>
-                                                <NavLink to='institution'>Banking as a Service <span className='text-light_green'>(Coming soon)</span></NavLink>
+                                                <NavLink to='dashboard'>Banking as a Service <span className='text-light_green'>(Coming soon)</span></NavLink>
                                             </li>
                                         </ul>
                                     </li>

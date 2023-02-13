@@ -1,4 +1,5 @@
 import React from 'react'
+import helperFunctions from '../../@helpers/helperFunction'
 
 function SummaryCard({name, icon, amount, percentage}) {
   return (
@@ -8,7 +9,7 @@ function SummaryCard({name, icon, amount, percentage}) {
             <img src={icon} alt={name}/>
         </div>
         <div className='flex justify-between mt-7'>
-            <h2 className='font-bold text-lg text-blue_text'>{amount}</h2>
+            <h2 className='font-bold text-lg text-blue_text'>{helperFunctions.nairaFormat(amount)}</h2>
             <h4 className='font-[450] text-xs'>+{percentage}%</h4>
         </div>
     </div>
