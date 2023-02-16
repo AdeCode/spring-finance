@@ -24,6 +24,8 @@ import Payins from './components/dashboard/Payins';
 import Payouts from './components/dashboard/Payouts';
 import SpringStaff from './components/dashboard/SpringStaff';
 import AddStaff from './components/dashboard/AddStaff';
+import Notification from './components/dashboard/Notification';
+import Coupon from './components/dashboard/Coupon';
 
 
 function Routers() {
@@ -56,6 +58,8 @@ function Routers() {
             <Route path='/dashboard/payouts' element={< Payouts />}></Route>
             <Route path='/dashboard/spring-staff' element={< SpringStaff />}></Route>
             <Route path='/dashboard/add-staff' element={< AddStaff />}></Route>
+            <Route path='notification' element={< Notification />}></Route>
+            <Route path='coupon' element={< Coupon />}></Route>
           </Route>
           <Route path='/holiday-card' element={< ComingSoon />}></Route>
         </Routes>
