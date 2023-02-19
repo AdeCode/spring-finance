@@ -103,11 +103,9 @@ function Navbar() {
                                     <li className='lg:text-sm font-semibold'>P2P Payment</li>
                                     <li className='lg:text-sm font-semibold'>SMEs Global Payments</li>
                                     <li className='lg:text-sm font-semibold'>Cross-border Tuition Payments</li>
-                                    {/* <li className='lg:text-sm'>BaaS (Banking as a Service)</li> */}
                                     <li className='lg:text-sm'>Global Payout/Payins</li>
                                     <li className='lg:text-sm'>Cross-border Virtual Wallets & Cards</li>
                                     <li className='lg:text-sm'>Domestic & Foreign Virtual Accounts</li>
-                                    {/* <li className='lg:text-sm'>API</li> */}
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>
@@ -162,7 +160,7 @@ function Navbar() {
                         </ul>
 
                     </div>
-                    <div className='lg:mt-0 mt-[6px] flex lg:gap-2 gap-[2px] lg:py-2'>
+                    <div className='lg:mt-0 mt-[6px] lg:flex hidden lg:gap-2 gap-[2px] lg:py-2'>
                         <a href='https://play.google.com/store/apps/details?id=com.getspring.finance' target='_blank' rel='noreferrer' className='flex play-store items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] lg:gap-4 lg:w-[199px]'>
                             <div>
                                 <img src={play} alt='play store'/>
