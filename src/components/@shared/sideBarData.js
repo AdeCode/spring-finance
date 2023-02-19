@@ -153,14 +153,14 @@ export const SidebarData = [
 
 	subNav: [
 		{
-			title: "Businesses",
-			path: "",
+			title: "Notification",
+			path: "/dashboard/notification",
 			icon: <FiBriefcase />,
 			cName: "sub-nav",
 		},
 		{
-			title: "API requests",
-			path: "",
+			title: "Coupons",
+			path: "/dashboard/coupon",
 			icon: <AiOutlineApi />,
 			cName: "sub-nav",
 		},
