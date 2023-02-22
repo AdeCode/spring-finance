@@ -62,15 +62,15 @@ const CustomerListTable = () => {
         accessorKey: 'name', //normal accessorKey
         header: 'Full Name',
         Cell: ({cell, row}) => {
-          return <div className="text-[#273240] font-semibold flex items-center">
-                <img
-                  alt="avatar"
-                  height={30}
-                  src={row.original.avatar}
-                  loading="lazy"
-                  style={{ borderRadius: '50%' }}
-                />
-              {cell.getValue()}
+          return <div className="text-[#273240] font-semibold flex items-center w-[200px]">
+                  <img
+                    alt="avatar"
+                    height={30}
+                    src={row.original.avatar}
+                    loading="lazy"
+                    style={{ borderRadius: '50%' }}
+                  />
+                <h2 className='text-start'>{cell.getValue()}</h2>
             </div>
         },
       },

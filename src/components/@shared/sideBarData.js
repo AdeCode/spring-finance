@@ -187,7 +187,7 @@ export const SidebarData = [
 		},
 		{
 			title: "Roles",
-			path: "",
+			path: "/dashboard/roles",
 			icon: <AiOutlineApi />,
 			cName: "sub-nav",
 		},
