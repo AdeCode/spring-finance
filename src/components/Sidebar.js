@@ -23,7 +23,7 @@ function Sidebar() {
     }
 
     return (
-        <Div className='sidebar w-fit h-fit p-3 bg-white text-[#324054]'>
+        <Div className='sidebar w-fit lg:h-[100vh] sticky overflow-y-scroll p-3 bg-white text-[#324054]'>
             <img src={Logo} alt='logo' className={`${open ? 'hidden' : 'flex'}`}/>
             {/* {
                 open ? 
@@ -46,7 +46,7 @@ function Sidebar() {
             </div>
 
 
-            <nav>
+            <nav className=''>
                 <div>
                     {
                         SidebarData.map((item, index) => {

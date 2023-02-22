@@ -28,7 +28,7 @@ function Dashboard() {
         // </Container>
         <Container className='bg-[#F5F5F5] hidden justify-between lg:flex w-full'>
             <div className='w-[13%] h-full'>
-                <div className="fixed">
+                <div className="fixed overflow-auto">
                     <Sidebar />
                 </div>
             </div>

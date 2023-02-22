@@ -21,94 +21,56 @@ import IosShareIcon from '@mui/icons-material/IosShare';
 //nested data is ok, see accessorKeys in ColumnDef below
 const data = [
     {
-        nameCode: 'Black Friday',
+        message: 'Lorem ipsum dolor sit amet consectetur. Suspendisse rhoncus amet molestie felis mi massa at.',
+        notificationType: 'Home page header',
+        notificationCategory: 'Static',
+        image: 'No image Required',
         country: 'All country',
-        status: 'Expired',
-        products:'All products',
-        discount:40,
-        numbers: 20,
-        retrieval:12,
-        startDate:'03/11/2022',
-        endDate:'01/01/2023'
     },
     {
-        nameCode: 'Independence promo',
-        country: 'Nigeria',
-        status: 'Active',
-        products:'All products',
-        discount:40,
-        numbers: 20,
-        retrieval:12,
-        startDate:'03/11/2022',
-        endDate:'01/01/2023'
+        message: 'Lorem ipsum dolor sit amet consectetur. Suspendisse rhoncus amet molestie felis mi massa at.',
+        notificationType: 'Home page header',
+        notificationCategory: 'Static',
+        image: 'No image Required',
+        country: 'All country',
     },
     {
-        nameCode: 'Independence promo',
-        country: 'Nigeria',
-        status: 'Scheduled',
-        products:'All products',
-        discount:40,
-        numbers: 20,
-        retrieval:12,
-        startDate:'03/11/2022',
-        endDate:'01/01/2023'
+        message: 'Lorem ipsum dolor sit amet consectetur. Suspendisse rhoncus amet molestie felis mi massa at.',
+        notificationType: 'Home page header',
+        notificationCategory: 'Static',
+        image: 'No image Required',
+        country: 'All country',
     },
+   
 ];
 
 
-const CouponTable = () => {
+const NotificationTable = () => {
     //should be memoized or stable
     const columns = useMemo(
         () => [
             {
-                accessorKey: 'nameCode', //normal accessorKey
-                header: 'Name Code',
+                accessorKey: 'message', //normal accessorKey
+                header: 'Message',
+            },
+            {
+                accessorKey: 'notificationType', 
+                header: 'Notification Type',
+            },
+            {
+                accessorKey: 'notificationCategory',
+                header: 'Notification Category',
+            },
+            {
+                accessorKey: 'image',
+                header: 'Image',
+                enableClickToCopy: true,
             },
             {
                 accessorKey: 'country',
                 header: 'Country',
                 enableClickToCopy: true,
             },
-            {
-                accessorKey: 'status', 
-                header: 'Status',
-                Cell: ({ renderedCellValue, row }) => {
-                    return <div className={`text-sm font-semibold ${renderedCellValue === 'Expired' ? 'text-[#FC414C]' : renderedCellValue === 'Active' ? 'text-[#34A853]' : renderedCellValue === 'Scheduled' ? 'text-[#F2AE05]' : 'text-[#323C47]'}`}>
-                        {renderedCellValue}
-                    </div>
-                },
-                // Cell: ({ cell }) => {
-                //     return <div className={`${cell.getValue() === 'Expired' ? 'text-[#FC414C]' : cell.getValue() === 'Active' ? 'text-[#34A853]' : cell.getValue() === 'Scheduled' ? 'text-[#F2AE05]' : 'text-[#323C47]'}} 
-                //     text-sm font-semibold`}>
-                //         {cell.getValue()}
-                //     </div>
-                // },
-            },
-            {
-                accessorKey: 'products',
-                header: 'Products',
-            },
-            {
-                accessorKey: 'discount',
-                header: 'Discount',
-            },
-            {
-                accessorKey: 'numbers',
-                header: 'Numbers',
-            },
-            {
-                accessorKey: 'retrieval',
-                header: 'Retrieval',
-            },
-            {
-                accessorKey: 'startDate',
-                header: 'Start Date',
-            },
-            {
-                accessorKey: 'endDate',
-                header: 'End Date',
-            },
-           
         ],
         [],
     );
@@ -238,4 +200,4 @@ const Section = styled.section`
   
 `
 
-export default CouponTable;
+export default NotificationTable;
