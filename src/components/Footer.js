@@ -78,7 +78,7 @@ function FooterSection() {
                 </nav>
             </div>
             <div className='hidden lg:flex justify-between mt-[57.7px]'>
-                <h5 className='w-full text-[16px] leading-[20px]'>Spring Finance is a Financial technology company and not a Bank. We partnered with banks who are duly licensed by the Central Bank of Nigeria and partners with PCI DSS compliance & other required financial licenses.</h5>
+                <h5 className='w-full text-[16px] leading-[20px]'>Springstack Technologies Limited is a Financial technology company and not a Bank. We partnered with banks who are duly licensed by the Central Bank of Nigeria and partners with PCI DSS compliance &amp; other required financial licenses.</h5>
                 {/* <div className='flex flex-col h-[73px]'>
                     <form className='form flex bg-white py-[5px] pl-[35px] pr-[6px]'>
                         <div className='form-group flex items-center'>

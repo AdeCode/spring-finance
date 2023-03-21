@@ -5,6 +5,7 @@ import friend from '../images/friend-desk.png'
 import fam from '../images/fam-desk.png'
 import nlocal from '../images/nlocal.png'
 import Mlocal from '../images/Mlocal.png'
+import card from '../images/3d.png'
 import Mremote from '../images/Mremote.png'
 import edu from '../images/edu-desk.png'
 import mobile_friend from '../images/mobile_friend.png'
@@ -72,7 +73,7 @@ function BusinessNeeds() {
                         </div> */}
                     </div>
                     <div className='right'>
-                        <div className='hidden lg:flex lg:w-[475px]'>
+                        <div className='hidden lg:flex lg:w-[435px]'>
                             <img src={nlocal} alt='local business needs' />
                         </div>
                         <div className='lg:hidden flex justify-center'>
@@ -117,11 +118,24 @@ function BusinessNeeds() {
                         <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>International students can now search, discover and pay tuition fees directly to their school’s bank account at a cheaper FX rates, faster settlement periods without multiple calls to an entire family to make tuition payments.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
-                    <div className='hidden lg:flex right mt-[34.2px] lg:h-[596px]'>
+                    <div className='hidden lg:flex right mt-[34.2px] lg:h-[550px]'>
                         <img src={edu} alt='local business needs' />
                     </div>
                     <div className='lg:hidden flex justify-center mt-[34.2px]'>
                         <img src={mobile_edu} alt='local business needs' />
+                    </div>
+                </div>
+                <div className='flex flex-col-reverse lg:flex-row lg:justify-between'>
+                    <div className='left flex flex-col justify-center'>
+                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Use our 3D-secure virtual card for all online payments</h2>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Time to spend in style anytime you want with a secure virtual card globally without stress. No monthly maintenance fee, get one today either for Business or Personal use.</p>
+                        {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
+                    </div>
+                    <div className='hidden lg:flex right mt-[34.2px] lg:h-[400px] w-[400px]'>
+                        <img src={card} alt='virtual card' />
+                    </div>
+                    <div className='lg:hidden flex justify-center mt-[34.2px]'>
+                        <img src={card} alt='virtual card' />
                     </div>
                 </div>
             </div>

@@ -100,12 +100,13 @@ function Navbar() {
                                 </span>
 
                                 <ul className='sub-menu absolute z-[1] bg-white lg:flex-col min-w-[200px] h-fit top-12'>
-                                    <li className='lg:text-sm font-semibold'>P2P Payment</li>
-                                    <li className='lg:text-sm font-semibold'>SMEs Global Payments</li>
-                                    <li className='lg:text-sm font-semibold'>Cross-border Tuition Payments</li>
-                                    <li className='lg:text-sm'>Global Payout/Payins</li>
-                                    <li className='lg:text-sm'>Cross-border Virtual Wallets & Cards</li>
-                                    <li className='lg:text-sm'>Domestic & Foreign Virtual Accounts</li>
+                                    <li className='lg:text-sm font-semibold'>Send and Receive Money Locally & Globally</li>
+                                    <li className='lg:text-sm font-semibold'>Discover SMEs Locally & Globally</li>
+                                    <li className='lg:text-sm font-semibold'>Virtual USD, GBP & EURO Accounts</li>
+                                    <li className='lg:text-sm font-semibold'>3D Secure Virtual Card</li>
+                                    <li className='lg:text-sm font-semibold'>Spring for QSR Business</li>
+                                    {/* <li className='lg:text-sm'>3D Secure Virtual Card</li> */}
+                                    {/* <li className='lg:text-sm'>Domestic & Foreign Virtual Accounts</li> */}
                                 </ul>
                             </li>
                             <li onClick={closeMenu} className='flex items-center flex-row lg:items-center lg:gap-[6px] cursor-pointer font-medium text-[22px] pb-[22px] lg:p-0 leading-[20px]  lg:font-semibold lg:text-lg lg:m-0'>

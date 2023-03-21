@@ -47,8 +47,8 @@ function GlobalSection() {
                     <img src={add} alt='add money' />
                 </div>
                 <div className='right flex flex-col items-center font-medium lg:ml-[56px] lg:pt-14 lg:pr-[63px] lg:items-start'>
-                    <h2 className='text-2xl text-center leading-7 pt-[33px] lg:text-left'>Global digital banking at your fingertips</h2>
-                    <p className='text-center lg:text-start leading-[140%] pt-[14px] text-xs w-[291px]'>Get free NGN, USD, GBP and EUR virtual accounts, wallets & cards for all required international transactions</p>
+                    <h2 className='text-2xl text-center leading-7 pt-[33px] lg:text-left'>Global digital banking at your fingertips with endless opportunities</h2>
+                    <p className='text-center lg:text-start leading-[140%] pt-[14px] text-xs w-[291px] lg:w-[400px]'>Get free NGN, USD, GBP and EUR virtual accounts, wallets & cards for all required international transactions</p>
                     <div className='flex flex-col mt-[31px] font-medium lg:items-start'>
                         <div className='flex flex-col items-center mb-6 lg:mb-[25px] lg:flex-row'>
                             <img src={Icon4} alt='icon' className='w-[40px] h-[40px]' />
