@@ -43,13 +43,13 @@ function TopSection() {
                 </div> */}
             </div>
 
-            <div className='hidden lg:flex mt-10'>
-                <img src={zero} alt='spring-zero-charges' />
+            <div className='hidden lg:flex mt-[5rem] h-[600px] w-[600px]'>
+                <img src={zero} alt='spring-zero-charges'/>
             </div>
             <div className='lg:hidden'>
                 <img src={mobileBan} alt='phone' />
             </div>
-            <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with <strong>SPRING</strong></h4>
+            {/* <h4 className='text-center w-full text-base font-normal leading-[18px] lg:text-[31px] lg:leading-9'>Get started with <strong>SPRING</strong></h4> */}
             {/* <div className='flex lg:gap-3 gap-2 mt-5 justify-center w-full'>
                 <button className='flex play lg:gap-[22px] gap-[13px] lg:py-2 py-1 lg:px-6 px-[14px] rounded-[4px] items-center lg:w-[239px]'>
                     <div className='hidden lg:flex'>
