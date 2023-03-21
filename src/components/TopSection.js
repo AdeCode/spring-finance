@@ -5,6 +5,7 @@ import Modal from './Modal'
 import WaitlistForm from './WaitlistForm'
 import mobileBan from '../images/mobile_ban.png'
 import deskBan from '../images/desk-ban.png'
+import zero from '../images/zero-charges.png'
 import play from '../images/play.png'
 import playM from '../images/playM.png'
 import apple from '../images/apple.png'
@@ -33,17 +34,17 @@ function TopSection() {
                 </Modal>
             }
             <h1 className='lg:w-[1039px] text-left lg:text-center text-[26px] lg:text-[46px] font-semibold lg:font-normal leading-9 lg:leading-[53px]'>
-                Your fast, easy and safe Social & Cross-border everyday payments with no frustration.
+                Seamless Global Banking Solution for African SMEs, International Students & Intending Migrants.
             </h1>
             <div className='lg:flex lg:flex-col lg:absolute lg:top-[5%] lg:items-center'>
-                <p className='lg:w-[748px] text-left lg:text-center mt-3 lg:mt-8'> <span className='title'>Send</span>  payments to businesses,  <span className='title'>Request/Send</span> money to friends & family and <span className='title'>Pay</span> your international tuiton fees with no fuss.</p>
+                <p className='lg:w-[748px] text-left lg:text-center mt-3 lg:mt-8'> <span className='title'>Send</span>  payments to SMEs in multiple currencies, <span className='title'>Request/Send</span> money to friends, family &amp; business partners and <span className='title'>Pay</span> your international tuiton fees with no fuss.</p>
                 {/* <div onClick={openModal} href='./' className='btn cursor-pointer w-[100%] lg:w-fit lg:flex lg:justify-center lg:py-4 py-[13.5px] text-center lg:px-8 text-white mt-3 lg:mt-9'>
                     Join our waitlist
                 </div> */}
             </div>
 
-            <div className='hidden lg:flex'>
-                <img src={deskBan} alt='phone' />
+            <div className='hidden lg:flex mt-10'>
+                <img src={zero} alt='spring-zero-charges' />
             </div>
             <div className='lg:hidden'>
                 <img src={mobileBan} alt='phone' />
