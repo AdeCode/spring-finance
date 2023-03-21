@@ -3,10 +3,14 @@ import styled from 'styled-components'
 import pay from '../images/g-pay.png'
 import friend from '../images/friend-desk.png'
 import fam from '../images/fam-desk.png'
+import nlocal from '../images/nlocal.png'
+import Mlocal from '../images/Mlocal.png'
+import Mremote from '../images/Mremote.png'
 import edu from '../images/edu-desk.png'
 import mobile_friend from '../images/mobile_friend.png'
 import mobile_fam from '../images/mobile_fam.png'
 import mobile_edu from '../images/mobile_edu.png'
+import remote from '../images/remote.png'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Modal from './Modal'
@@ -60,19 +64,19 @@ function BusinessNeeds() {
                 <div className='top flex flex-col-reverse lg:flex-row lg:pt-8 lg:justify-between'>
                     <div className='left flex flex-col lg:pt-56'>
                         <div className='flex justify-center lg:justify-start'>
-                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing</h2>
+                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing locally</h2>
                         </div>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'> Irrespective of where your business is located, you should be discovered and able to collect payments from your customers either as a one-off, automated or recurring payments golbally without frustration. </p>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'> Irrespective of where your business is located, you should be discovered, boost your sales and earn in multiple currencies across the globe from your customers either as a one-off, automated or recurring payments globally without frustration. </p>
                         {/* <div onClick={openBusinessModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
                             Register Now
                         </div> */}
                     </div>
                     <div className='right'>
                         <div className='hidden lg:flex lg:w-[475px]'>
-                            <img src={friend} alt='local business needs' />
+                            <img src={nlocal} alt='local business needs' />
                         </div>
                         <div className='lg:hidden flex justify-center'>
-                            <img src={mobile_friend} alt='local business needs' />
+                            <img src={Mlocal} alt='local business needs' />
                         </div>
                     </div>
                 </div>
@@ -84,12 +88,25 @@ function BusinessNeeds() {
                         <img src={mobile_fam} alt='local business needs' />
                     </div>
                     <div className='flex justify-center flex-col lg:mt-[60px] lg:pt-[60px]'>
-                        <h2 className='lg:w-[595px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Pay your friends & family globally</h2>
-                        <p className='lg:w-[573px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Request, send and receive money from friends and family globally in a fun and easy way on Spring. </p>
+                        <h2 className='lg:w-[595px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Send money to your friends, family &amp; business partners globally</h2>
+                        <p className='lg:w-[573px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Request, send and receive money from friends, family and your business partners around the world easily on Spring.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                 </div>
                 <div className='flex flex-col-reverse lg:flex-row lg:justify-between'>
+                    <div className='left flex flex-col justify-center'>
+                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Remote workers can now get paid in USD, GBP &amp; EURO</h2>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Seamlessly getting paid from foreign companies around the world without waiting for any stressful DOM bank account opening, transfers or conversions.</p>
+                        {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
+                    </div>
+                    <div className='hidden lg:flex right mt-[34.2px] lg:h-[496px]'>
+                        <img src={remote} alt='local business needs' />
+                    </div>
+                    <div className='lg:hidden flex justify-center mt-[34.2px]'>
+                        <img src={Mremote} alt='local business needs' />
+                    </div>
+                </div>
+                <div className='flex flex-col-reverse lg:flex-row-reverse lg:justify-between'>
                     <div className='left flex flex-col '>
                         <div className='flex justify-center lg:justify-start lg:flex-col'>
                             <div className=''>
@@ -97,7 +114,7 @@ function BusinessNeeds() {
                             </div>
                             <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Pay your international tuition fees directly to your school</h2>
                         </div>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>International students can now search and pay tuition fees directly to their school’s bank account at a cheaper FX rates, faster settlement periods without multiple calls to an entire family to make tuition payments. </p>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>International students can now search, discover and pay tuition fees directly to their school’s bank account at a cheaper FX rates, faster settlement periods without multiple calls to an entire family to make tuition payments.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                     <div className='hidden lg:flex right mt-[34.2px] lg:h-[596px]'>
