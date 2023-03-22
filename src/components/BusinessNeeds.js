@@ -61,13 +61,13 @@ function BusinessNeeds() {
                     <BusinessForm />
                 </Modal>
             }
-            <div className='lg:flex lg:flex-col lg:gap-8'>
+            <div className='lg:flex lg:flex-col lg:gap-8 lg:pb-10'>
                 <div className='top flex flex-col-reverse lg:flex-row lg:pt-8 lg:justify-between'>
                     <div className='left flex flex-col lg:pt-56'>
                         <div className='flex justify-center lg:justify-start'>
-                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing locally</h2>
+                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[40px] lg:leading-[56px] text-2xl'>All local businesses needs to keep growing locally</h2>
                         </div>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'> Irrespective of where your business is located, you should be discovered, boost your sales and earn in multiple currencies across the globe from your customers either as a one-off, automated or recurring payments globally without frustration. </p>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[18px] lg:leading-[160%] mt-[18px]'> Irrespective of where your business is located, you should be discovered, boost your sales and earn in multiple currencies across the globe from your customers either as a one-off, automated or recurring payments globally without frustration. </p>
                         {/* <div onClick={openBusinessModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>
                             Register Now
                         </div> */}
@@ -89,15 +89,15 @@ function BusinessNeeds() {
                         <img src={mobile_fam} alt='local business needs' />
                     </div>
                     <div className='flex justify-center flex-col lg:mt-[60px] lg:pt-[60px]'>
-                        <h2 className='lg:w-[595px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Send money to your friends, family &amp; business partners globally</h2>
-                        <p className='lg:w-[573px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Request, send and receive money from friends, family and your business partners around the world easily on Spring.</p>
+                        <h2 className='lg:w-[595px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[40px] lg:leading-[56px] text-2xl'>Send money to your friends, family &amp; business partners globally</h2>
+                        <p className='lg:w-[573px] text-center lg:text-left lg:text-[18px] lg:leading-[160%] mt-[18px]'>Request, send and receive money from friends, family and your business partners around the world easily on Spring.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                 </div>
                 <div className='flex flex-col-reverse lg:flex-row lg:justify-between'>
                     <div className='left flex flex-col justify-center'>
-                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Remote workers can now get paid in USD, GBP &amp; EURO</h2>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Seamlessly getting paid from foreign companies around the world without waiting for any stressful DOM bank account opening, transfers or conversions.</p>
+                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[40px] lg:leading-[56px] text-2xl'>Remote workers can now get paid in USD, GBP &amp; EURO</h2>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[18px] lg:leading-[160%] mt-[18px]'>Seamlessly getting paid from foreign companies around the world without waiting for any stressful DOM bank account opening, transfers or conversions.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                     <div className='hidden lg:flex right mt-[34.2px] lg:h-[496px]'>
@@ -113,9 +113,9 @@ function BusinessNeeds() {
                             <div className=''>
                                 <img src={pay} alt='pay' className='hidden lg:flex h-[150px]' />
                             </div>
-                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Pay your international tuition fees directly to your school</h2>
+                            <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[40px] lg:leading-[56px] text-2xl'>Pay your international tuition fees directly to your school</h2>
                         </div>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>International students can now search, discover and pay tuition fees directly to their school’s bank account at a cheaper FX rates, faster settlement periods without multiple calls to an entire family to make tuition payments.</p>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[18px] lg:leading-[160%] mt-[18px]'>International students can now search, discover and pay tuition fees directly to their school’s bank account at a cheaper FX rates, faster settlement periods without multiple calls to an entire family to make tuition payments.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                     <div className='hidden lg:flex right mt-[34.2px] lg:h-[550px]'>
@@ -127,8 +127,8 @@ function BusinessNeeds() {
                 </div>
                 <div className='flex flex-col-reverse lg:flex-row lg:justify-between'>
                     <div className='left flex flex-col justify-center'>
-                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[46px] lg:leading-[56px] text-2xl'>Use our 3D-secure virtual card for all online payments</h2>
-                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[20px] lg:leading-[160%] mt-[18px]'>Time to spend in style anytime you want with a secure virtual card globally without stress. No monthly maintenance fee, get one today either for Business or Personal use.</p>
+                        <h2 className='lg:w-[595px] w-[317px] mt-[15.5px] text-center lg:text-left font-medium lg:text-[40px] lg:leading-[56px] text-2xl'>Use our 3D-secure virtual card for all online payments</h2>
+                        <p className='lg:w-[595px] text-center lg:text-left lg:text-[18px] lg:leading-[160%] mt-[18px]'>Time to spend in style anytime you want with a secure virtual card globally without stress. No monthly maintenance fee, get one today either for Business or Personal use.</p>
                         {/* <div onClick={openModal} className='btn w-full flex justify-center py-[13.5px] lg:py-4 lg:px-8 text-white mt-[18px] lg:mt-9 lg:w-[181px] cursor-pointer'>Join our waitlist</div> */}
                     </div>
                     <div className='hidden lg:flex right mt-[34.2px] lg:h-[400px] w-[400px]'>
