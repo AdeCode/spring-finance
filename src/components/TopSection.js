@@ -33,17 +33,17 @@ function TopSection() {
                     <WaitlistForm />
                 </Modal>
             }
-            <h1 className='lg:w-[1039px] text-left lg:text-center text-[26px] lg:text-[46px] font-semibold lg:font-normal leading-9 lg:leading-[53px]'>
+            <h1 className='lg:w-[1039px] text-left lg:text-center text-[26px] lg:text-[40px] font-semibold lg:font-normal leading-9 lg:leading-[53px]'>
                 Seamless Global Banking Solution for African SMEs, International Students & Intending Migrants.
             </h1>
-            <div className='lg:flex lg:flex-col lg:absolute lg:top-[5%] lg:items-center'>
-                <p className='lg:w-[748px] text-left lg:text-center mt-3 lg:mt-8'> <span className='title'>Send</span>  payments to SMEs in multiple currencies, <span className='title'>Request/Send</span> money to friends, family &amp; business partners and <span className='title'>Pay</span> your international tuiton fees with no fuss.</p>
+            <div className='lg:flex lg:flex-col lg:items-center lg:mb-4'>
+                <p className='lg:w-[748px] text-left font-semibold lg:text-center mt-3 lg:mt-8 lg:text-xl'> <span className='title'>Send</span>  payments to SMEs in multiple currencies, <span className='title'>Request/Send</span> money to friends, family &amp; business partners and <span className='title'>Pay</span> your international tuiton fees with no fuss.</p>
                 {/* <div onClick={openModal} href='./' className='btn cursor-pointer w-[100%] lg:w-fit lg:flex lg:justify-center lg:py-4 py-[13.5px] text-center lg:px-8 text-white mt-3 lg:mt-9'>
                     Join our waitlist
                 </div> */}
             </div>
 
-            <div className='hidden lg:flex mt-[5rem] h-[600px] w-[600px]'>
+            <div className='hidden lg:flex h-[600px] w-[600px]'>
                 <img src={zero} alt='spring-zero-charges'/>
             </div>
             <div className='lg:hidden'>
@@ -77,17 +77,17 @@ function TopSection() {
                 </button>
             </div> */}
 
-            <div className='lg:mt-0 mt-[6px] flex lg:gap-2 gap-[2px] lg:py-2'>
-                <a href='https://play.google.com/store/apps/details?id=com.getspring.finance' target='_blank' rel='noreferrer' className='flex play items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] lg:gap-4 lg:w-[199px]'>
+            <div className='lg:mt-0 mt-[6px] flex lg:gap-2 gap-[6px] lg:py-2 w-full justify-center'>
+                <a href='https://play.google.com/store/apps/details?id=com.getspring.finance' target='_blank' rel='noreferrer' className='flex play items-center border-[2px] border-[#E2E4E8] lg:py-[6px] py-[2px] lg:px-5 px-[5px] rounded-[4px] gap-4 lg:w-[199px] min-w-[114px]'>
                     <div>
                         <img src={play} alt='play store' />
                     </div>
                     <div className='flex flex-col items-start'>
-                        <h4 className='lg:text-[#7C8087] font-normal lg:text-xs text-[3px]'>Get it on</h4>
-                        <h3 className='font-bold lg:text-lg text-black text-[4.8px] text-left'>Google Play</h3>
+                        <h4 className='lg:text-[#7C8087] font-normal lg:text-xs text-[7.6px]'>Get it on</h4>
+                        <h3 className='font-bold lg:text-lg text-black text-[11px] text-left'>Google Play</h3>
                     </div>
                 </a>
-                <a href='/' className='flex store items-center lg:py-[6px] py-[2px] lg:px-5 px-1 rounded-[4px] lg:gap-4 gap-1 lg:w-[199px]'>
+                <a href='/' className='flex store items-center lg:py-[6px] py-[2px] lg:px-5 px-1 rounded-[4px] gap-4 lg:w-[199px] min-w-[114px]'>
                     <div className='hidden lg:flex'>
                         <img src={apple} alt='app store' />
                     </div>
@@ -95,8 +95,8 @@ function TopSection() {
                         <img src={appleM} alt='app store' />
                     </div>
                     <div className='flex flex-col items-start text-white'>
-                        <span className='text-white lg:text-xs text-[3px] font-normal'>Coming soon</span>
-                        <h3 className='font-bold lg:text-lg text-[4.8px] text-white'>App Store</h3>
+                        <span className='text-white lg:text-xs text-[7.6px] font-normal'>Coming soon</span>
+                        <h3 className='font-bold lg:text-lg text-[11px] text-white'>App Store</h3>
                     </div>
                 </a>
             </div>
@@ -118,10 +118,9 @@ const Section = styled.div`
     }
 
     p{
-        font-weight: 700;
+        font-weight: 600;
         font-size: 20px;
         line-height: 159%;
-       
         color: #263238;
         
         .title{
